@@ -755,6 +755,7 @@ jQuery($=> {
         margin: 0,
         dots: false,
         nav: false,
+        rtl:true,
         responsive: {
             1280: {
                 items: 4,
