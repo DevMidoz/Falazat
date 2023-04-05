@@ -68,15 +68,17 @@
 
 
 /*Global Styling*/
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap');
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800|Open+Sans:300,400,600,700');*/
 body {
     font-size: 15px;
     color: #808080;
     font-weight: normal;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif !important;
     overflow-x: hidden;
-    direction: ltr;
+    direction: rtl;
     line-height: 1.5;
 }
 ::selection{
@@ -146,7 +148,8 @@ h4,
 h5,
 .button,
 .numbered .tp-bullet .tp-count {
-    font-family: 'Handlee', cursive;
+    /* font-family: 'Handlee', cursive; */
+    font-family: 'Cairo', sans-serif;
 }
 
 h1 {
@@ -530,15 +533,16 @@ p {
 
 .slider-top-text{
     color: rgba(0, 0, 0, 0.8);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
 .slider-middle-text{
-    font-family: 'Handlee', cursive;
+    font-family: 'Cairo', sans-serif;
+    /* font-family: 'Handlee', cursive; */
     font-weight: bold;
 }
 
-.yellow-blue-btn{font-size: 12px;font-family: 'Open Sans', sans-serif; padding: 10px 30px;color:#ffffff !important;font-weight: 600;background-color:#ffb902;border:1px solid #ffffff !important;border-radius: 0px;-webkit-transition: .8s ease !important;-o-transition: .8s ease !important;transition: .8s ease !important; cursor: pointer}
+.yellow-blue-btn{font-size: 12px;font-family: 'Cairo', sans-serif; padding: 10px 30px;color:#ffffff !important;font-weight: 600;background-color:#ffb902;border:1px solid #ffffff !important;border-radius: 0px;-webkit-transition: .8s ease !important;-o-transition: .8s ease !important;transition: .8s ease !important; cursor: pointer}
 .yellow-blue-btn:hover{color: #ffffff; ;background-color:#028cca !important; border: 1px solid transparent !important;}
 
 
@@ -601,6 +605,7 @@ a.image,
 
 .image img {
     width: 100%;
+    height: 100% !important;
 }
 
 section,
@@ -1294,7 +1299,8 @@ ul.hours_links li::before,
 blockquote.blockquote::before,
 ul.links li a::before,
 .form-check label::before {
-    font-family: "Font Awesome 5 Free", serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
 }
 
@@ -1505,7 +1511,8 @@ ul.links li a::before,
     line-height: normal;
     margin: 16px 1.75rem;
     display: inline-block;
-    font-family: 'Handlee', cursive;
+    /* font-family: 'Handlee', cursive; */
+    font-family: 'Cairo', sans-serif;
     font-weight: bold;
 }
 
@@ -1817,11 +1824,11 @@ a.dropdown-toggle::after {
 }
 
 .transparent-bg .sidemenu_btn>span {
-    background: #606060;
+    background: #9a9a9a;
 }
 
 .fixedmenu .sidemenu_btn>span:not(.gradient-bg) {
-    background: #606060 !important;
+    background: #9a9a9a !important;
 }
 
 .sidemenu_btn>span:nth-child(2) {
@@ -2470,6 +2477,20 @@ a.dropdown-toggle::after {
     /*background: url(../images/testimonial-bg.jpg) no-repeat;*/
     background-color: #c7d911;
 }
+
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.imageContainer .card-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
 
 .contact-banner::before,
 .contact-banner iframe {
@@ -4400,7 +4421,8 @@ ul.rounded li::before {
 
 .quote-wrapper h3::before {
     content: "\f10d";
-    font-family: "Font Awesome 5 Free", serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     font-size: 20px;
     position: absolute;
@@ -4411,7 +4433,8 @@ ul.rounded li::before {
 
 .quote-wrapper h3::after {
     content: "\f10e";
-    font-family: "Font Awesome 5 Free", serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     font-size: 20px;
     position: absolute;
@@ -4931,7 +4954,8 @@ form.findus select {
 
 form.findus .select:after {
     content: "\f107";
-    font-family: "Font Awesome 5 Free", serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     color: inherit;
     font-size: 16px;
@@ -5299,7 +5323,8 @@ ul.count_down.white li p:nth-child(2) {
 .pricing-item.sale::before,
 .shopping-box .sale::before {
     content: '\f02e';
-    font-family: "Font Awesome 5 Free", serif;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     position: absolute;
     top: -28px;
@@ -5346,7 +5371,7 @@ ul.count_down.white li p:nth-child(2) {
 .pricing-list li::before,
 .price-included::before {
     content: '\f00c';
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     position: absolute;
     top: 2px;
@@ -5359,7 +5384,7 @@ ul.count_down.white li p:nth-child(2) {
 
 .pricing-list li.price-not::before {
     content: '\f00d';
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: 'Cairo', sans-serif;
     font-weight: 900;
     position: absolute;
     top: 2px;
@@ -5521,12 +5546,13 @@ ul.links li a {
     margin-bottom: 10px;
 }
 
-ul.links li a::before {
+/* ul.links li a::before {
     color: #ffb902;
     margin-right: 5px;
-    content: "\f0da";
+    margin-left: 5px;
+    content: "\f0d9";
     vertical-align: baseline;
-}
+} */
 
 .bg-light-dark ul.links li a::before {
     color: #7596a8;
@@ -5556,13 +5582,13 @@ ul.hours_links li {
     z-index: 1;
 }
 
-ul.hours_links li::before {
+/* ul.hours_links li::before {
     height: 1px;
     width: 100%;
     border-bottom: 1px dashed #fff;
     top: 56%;
     margin-top: -2px;
-}
+} */
 
 ul.hours_links li:first-child::before {
     top: 45%;
@@ -5927,12 +5953,13 @@ ul.latest_news li a:focus+span.defaultcolor {
     font-size: 50px;
     color: #606060;
     font-weight: 300;
-    font-family: 'Handlee', cursive;
+    /* font-family: 'Handlee', cursive; */
+    font-family: 'Cairo', sans-serif;
 }
 
 .standalone-detail .para_text{
     color: #606060;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cairo', sans-serif;
     text-align: center;
     font-size: 15px;
     margin: 0 auto;
@@ -5945,12 +5972,13 @@ ul.latest_news li a:focus+span.defaultcolor {
 .standalone-area .gradient-text1{
     font-weight: 300;
     margin-bottom: 12px;
-    font-family: 'Handlee', cursive;
+    /* font-family: 'Handlee', cursive; */
+    font-family: 'Cairo', sans-serif;
     font-size: 45px;
     color: #606060;
 }
 .standalone-area .stand-img-des .para_text{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cairo', sans-serif;
     color: #606060;
 }
 
@@ -5989,3 +6017,4 @@ ul.latest_news li a:focus+span.defaultcolor {
         margin-bottom: 3rem;
     }
 }
+

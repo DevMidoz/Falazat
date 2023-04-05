@@ -662,7 +662,8 @@ jQuery($=> {
         animateIn: "fadeIn",
         animateOut: "fadeOut",
         dots: false,
-        nav: true,
+        nav: false,
+        rtl:true,
         navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
         responsive: {
             980: {
@@ -772,10 +773,11 @@ jQuery($=> {
 
     /*Services Box Slider*/
     $("#services-slider").owlCarousel({
-        autoplay: false,
+        rtl: true,
+        autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
-        smartSpeed: 1200,
+        smartSpeed: 2000,
         loop: true,
         nav: false,
         navText: false,
