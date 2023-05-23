@@ -21,9 +21,9 @@
     width: 13px;
     height: 13px;
     position:relative;
-    border: 3px solid #c7d911;
+    border: 3px solid #afd779;
     border-radius: 50%;
-    background: #c7d911;
+    background: #afd779;
     cursor: pointer;
     box-sizing: content-box;
     -webkit-transition: all .5s ease-in-out;
@@ -34,7 +34,7 @@
 }
 
 .dark-slider .surfing .tp-bullet .tp-bullet-inner{
-    border: 3px solid #c7d911;
+    border: 3px solid #afd779;
 }
 
 

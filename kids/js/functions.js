@@ -752,6 +752,7 @@ jQuery($=> {
     /*Our Team*/
     $("#ourteam-slider").owlCarousel({
         items: 4,
+        autoplay: true,
         margin: 0,
         dots: false,
         nav: false,

@@ -102,6 +102,7 @@
     height: 26px;
 }
 
+
 .svg-process-bottom-holder{
     position: absolute;
     bottom:-21px;
@@ -118,6 +119,38 @@
 }
 /*PROCESS END SVG*/
 
+
+/*principles START SVG*/
+.svg-principles-top-holder{
+    position: absolute;
+    top:-21px;
+    right: 0;
+    left: 0;
+    z-index: 11111;
+}
+
+.svg-principles-top-holder .svg-principles-top{
+    background: url('../images/zig-line-green.svg');
+    background-repeat: repeat-x;
+    height: 26px;
+}
+
+
+.svg-principles-bottom-holder{
+    position: absolute;
+    bottom:-21px;
+    right: 0;
+    left: 0;
+    z-index: 11111;
+    transform: rotate(180deg);
+}
+
+.svg-principles-bottom-holder .svg-principles-bottom{
+    background: url('../images/zig-line-green.svg');
+    background-repeat: repeat-x;
+    height: 26px;
+}
+/*principles END SVG*/
 
 
 
