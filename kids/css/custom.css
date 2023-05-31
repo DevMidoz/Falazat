@@ -263,13 +263,13 @@
  /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
 
-    #testimonial-slider .owl-prev {
+    #testimonial-slider .owl-prev, #testimonial-slider-twitter .owl-prev  {
         position: absolute;
         top: -130px;
         left: -136px !important;
     }
 
-    #testimonial-slider .owl-next {
+    #testimonial-slider .owl-next,  #testimonial-slider-twitter .owl-next {
         position: absolute;
         top: -130px;
         left: 100px !important;

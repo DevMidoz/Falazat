@@ -95,19 +95,19 @@ jQuery($=> {
             ratingText.removeClass('scale-price');
             switch (n) {
                 case 0:
-                    ratingText.text('Poor!');
+                    ratingText.text('ضعيف!');
                     break;
                 case 1:
-                    ratingText.text('Average!');
+                    ratingText.text('متوسط!');
                     break;
                 case 2:
-                    ratingText.text('Good!');
+                    ratingText.text('جيد!');
                     break;
                 case 3:
-                    ratingText.text('Very Good!');
+                    ratingText.text('جيد جدا!');
                     break;
                 case 4:
-                    ratingText.text('Excellent!');
+                    ratingText.text('ممتاز!');
             }
         }, 180);
     };
@@ -655,6 +655,33 @@ jQuery($=> {
     $("#testimonial-slider").owlCarousel({
         items: 1,
         autoplay: false,
+        autoplayHoverPause: true,
+        mouseDrag: false,
+        loop: true,
+        margin: 30,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        dots: false,
+        nav: false,
+        rtl:true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            980: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            320: {
+                items: 1,
+            },
+        }
+    });
+
+    /*Testimonials-twitter*/
+    $("#testimonial-slider-twitter").owlCarousel({
+        items: 5,
+        autoplay: true,
         autoplayHoverPause: true,
         mouseDrag: false,
         loop: true,

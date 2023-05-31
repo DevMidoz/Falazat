@@ -21,9 +21,9 @@
     width: 13px;
     height: 13px;
     position:relative;
-    border: 3px solid #afd779;
+    border: 3px solid #C1CA6D;
     border-radius: 50%;
-    background: #afd779;
+    background: #C1CA6D;
     cursor: pointer;
     box-sizing: content-box;
     -webkit-transition: all .5s ease-in-out;
@@ -34,20 +34,20 @@
 }
 
 .dark-slider .surfing .tp-bullet .tp-bullet-inner{
-    border: 3px solid #afd779;
+    border: 3px solid #C1CA6D;
 }
 
 
 .surfing .tp-bullet.selected .tp-bullet-inner{
     transform: scale(1.4);
     margin-top:2px;
-    background: #ffb902;
+    background: #BB5F44;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    border: 3px solid #ffb902;
+    border: 3px solid #BB5F44;
 }
 
 .dark-slider .surfing .tp-bullet.selected .tp-bullet-inner{
