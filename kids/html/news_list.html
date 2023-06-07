@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | فروعنا </title>
+    <title> فلذات | الأخبار </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -20,7 +20,146 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
+    <style>
+     figure {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 500px;
+	 border-radius: 10px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+ figure:hover {
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+ figure:hover h1 {
+	 opacity: 0;
+	 transform: scale(0.7);
     
+}
+ figure:hover img {
+	 transform: scale(1.25);
+}
+ figure:hover figcaption {
+	 bottom: 0;
+}
+ figure h1 {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+    z-index: 999;
+     
+}
+ figure .imageContainer {
+	 height: 100%;
+	 transition: 0.25s;
+}
+ figure figcaption {
+	 position: absolute;
+	 bottom: -36%;
+	 left: 0;
+	 width: 100%;
+	 margin: 0;
+	 padding: 30px;
+	 background-color: rgba(84, 142, 153, 0.85);
+	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	 color: white;
+	 line-height: 1;
+	 transition: 0.25s;
+     text-align: right;
+}
+figure figcaption .userName {
+    top: 7px;
+    left: 0;
+}
+ figure figcaption h3 {
+	 margin: 0 0 20px;
+	 padding: 0;
+}
+ figure figcaption p {
+	 font-size: 14px;
+	 line-height: 1.75;
+}
+ figure figcaption button {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin: 10px 0 0;
+	 padding: 10px 30px;
+	 /* background-color: #1abc9c; */
+	 border: none;
+	 border-radius: 5px;
+	 color: white;
+	 font-size: 14px;
+	 cursor: pointer;
+}
+figure .meta-tags {
+    top: 90px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    /* font-size: 11px; */
+    font-weight: 100;
+    line-height: 1;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+    z-index: 999;
+}
+figure:hover .meta-tags {
+	 opacity: 0;
+	 transform: scale(0.7);
+    
+}
+
+ @media (max-width: 1200px) {
+    figure figcaption {
+        bottom: -39%;
+    }
+}
+
+@media (max-width: 992px) {
+    figure figcaption {
+    bottom: -35%;
+}
+}
+
+@media (max-width: 768px) {
+    figure figcaption {
+        bottom: -31%;
+    }
+}
+
+@media (max-width: 576px) {
+    figure figcaption {
+        bottom: -31%;
+    }
+}
+@media (max-width: 462px) {
+    figure figcaption {
+        bottom: -35%;
+    }
+}
+/* @media (max-width: 341px) {
+    figure figcaption {
+        bottom: -31%;
+    }
+} */
+
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="90" >
 <!--PreLoader-->
@@ -197,10 +336,10 @@
         <div class="bgdefault  title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">فروعنا </h3>
+                    <h3 class="float-left">الأخبار </h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item hover-light text-bold">فروعنا </li>
+                        <li class="breadcrumb-item hover-light text-bold">الأخبار </li>
                     </ul>
                 </div>
             </div>
@@ -208,179 +347,169 @@
     </div>
 </section>
 
-<!-- Services us -->
-<section id="our-services" class="padding bglight">
-    <div class="container">
-        <div class="col-md-12 text-center heading_space wow fadeIn" data-wow-delay="300ms">
-            <h2 class="heading bottom30 darkcolor font-light2"><span class="font-weight-normal"></span> فروعنا
-                <span class="divider-center"></span>
-            </h2>
-            <div class="col-12">
-                <p class="mb-n3">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر</p>
-            </div>
+<section id="news_general" class="padding">
+   <div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
         </div>
-        <div class="cardCustomDesign">
-            <section class="articles">
-                <article>
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel1.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>هيلتون العالمية</h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article>
-              
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel2.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>منتجعات كونراد </h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article>
-              
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel3.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>والدورف استوريا</h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
 
-                <article>
-              
-                    <div class="article-wrapper">
-                      <figure>
-                        <img src="../images/hotel3.jpg" alt="" />
-                      </figure>
-                      <div class="article-body text-right">
-                        <h2>منتجعات كونراد 2</h2>
-                        <p>
-                          كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                        </p>
-                        <a href="branch-detail.html" class="read-more">
-                           اقرأ المزيد 
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                          </svg>
-                        </a>
-                      </div>
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
                     </div>
-                  </article>
-
-                  <article>
-              
-                    <div class="article-wrapper">
-                      <figure>
-                        <img src="../images/hotel3.jpg" alt="" />
-                      </figure>
-                      <div class="article-body text-right">
-                        <h2>والدورف استوريا 2</h2>
-                        <p>
-                          كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                        </p>
-                        <a href="branch-detail.html" class="read-more">
-                           اقرأ المزيد 
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-
-           
-              </section>
+                </figcaption>
+            </figure>
         </div>
-        <!-- <div id="services-measonry" class="cbp">
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/209646075.jpg" width="350px" height="253.875px"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content brand text-center">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">هيلتون العالمية</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
                 </div>
-            </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/Resorts-World-Las-Vegas_Exterior-scaled.jpg"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
                     </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">منتجعات كونراد </a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
                 </div>
-            </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/WaldorfAstoriaOrlando-Florida-CRHotel.webp"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
                     </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">والدورف استوريا</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
                 </div>
-            </div>
-       
-        </div> -->
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+                <ul class="meta-tags position-absolute ">
+                    <li><a href="#." class="text-white"><i class="fas fa-calendar-alt mx-2"></i>14 فبراير</a></li>
+                    <li><a href="#." class="text-white"><i class="far fa-comment-dots mx-2"></i>8 تعليقات</a></li>
+                </ul>
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <a href="#." class=" userName text-white position-absolute top"> <i class="far fa-user mx-2"></i> أحمد ياسر </a>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
     </div>
+    
+   </div>
 </section>
-<!-- Services us ends -->
-
 <!-- Contact US -->
 <section id="stayconnect1" class="bglight position-relative padding noshadow">
     <div class="container ">
@@ -444,6 +573,8 @@
 </section>
 <!-- Contact US ends -->
 
+
+
 <!--Site Footer Here-->
 <footer id="site-footer" class="position-relative bg-orange padding_top">
     <div class="svg-footer-top-holder">
@@ -474,22 +605,22 @@
                     <h3 class="whitecolor text-right bottom25">خدماتنا</h3>
                     <ul class="links">
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#header">الرئيسية</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">عن التعليم</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">اخر الاخبار</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">قبول الأطفال </a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">اتصل بنا</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">سياسة الخصوصية</a></li>
                     </ul>
                 </div>

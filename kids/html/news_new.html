@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | فروعنا </title>
+    <title> فلذات | المركز الاعلامي </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -20,7 +20,193 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
-    
+    <style>
+        :root {
+  --base-grid: 8px;
+  --colour-body-background: #fff;
+  --colour-background: #548E99;
+  --colour-background-folded: #548E99;
+  --colour-background-stripes: #8CB6BE;
+  --colour-text: #fff;
+}
+
+
+
+#news_general .articles {
+  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
+  display: grid;
+  grid-row-gap: calc(var(--base-grid)*8);
+  grid-column-gap: calc(var(--base-grid)*6);
+  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
+  justify-items: center;
+}
+
+#news_general .articles__article {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  animation-name: animateIn;
+  animation-duration: .35s;
+  animation-delay: calc(var(--animation-order)*100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+#news_general .articles__article:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--base-grid)*-2);
+  left: calc(var(--base-grid)*-2);
+  border: 2px dashed var(--colour-background);
+  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
+  z-index: -1;
+}
+
+#news_general .articles__article.before-orange:before {
+    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #BB5F44 0, #BB5F44 5px) !important;
+    border: 2px dashed #BB5F44 !important;
+}
+#news_general .articles__article.before-light-blue:before {
+    border: 2px dashed #8CB6BE !important;
+    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #8CB6BE 0, #8CB6BE 5px) !important;
+}
+#news_general .articles__article.before-green:before {
+    border: 2px dashed #C1CA6D !important;
+    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #C1CA6D 0, #C1CA6D 5px) !important;
+}
+#news_general .articles__article.before-yellow:before {
+    border: 2px dashed #e4dc99 !important;
+    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #e4dc99 0, #e4dc99 5px) !important;
+}
+
+#news_general .articles__article,
+#news_general .articles__article:before {
+  width: calc(var(--base-grid)*35);
+  height: calc(var(--base-grid)*35);
+}
+
+#news_general .articles__link {
+  background-color: var(--colour-body-background);
+  border: 2px solid var(--colour-background);
+  display: block;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+#news_general .articles__link:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(var(--base-grid)*3);
+  width: calc(var(--base-grid)*2);
+  height: calc(var(--base-grid)*2);
+  margin-top: calc(var(--base-grid)*-1);
+  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+  background-color: var(--colour-background);
+  opacity: 0;
+  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
+}
+
+#news_general .articles__link.after-orange {
+    border: 2px solid #BB5F44 !important;
+}
+#news_general .articles__link.after-light-blue {
+    border: 2px solid #8CB6BE !important;
+}
+#news_general .articles__link.after-green {
+    border: 2px solid #C1CA6D !important;
+}
+#news_general .articles__link.after-yellow {
+    border: 2px solid #e4dc99 !important;
+}
+
+#news_general .articles__link.after-orange:after {
+    background-color : #BB5F44 !important;
+    border: 2px solid #BB5F44 !important;
+}
+#news_general .articles__link.after-light-blue:after {
+    background-color : #8CB6BE !important;
+    border: 2px solid #8CB6BE !important;
+}
+#news_general .articles__link.after-green:after {
+    background-color : #C1CA6D !important;
+    border: 2px solid #C1CA6D !important;
+}
+#news_general .articles__link.after-yellow:after {
+    background-color : #e4dc99 !important;
+    border: 2px solid #e4dc99 !important;
+}
+
+#news_general .articles__content {
+  background-color: var(--colour-background);
+  color: var(--colour-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: calc(var(--base-grid)*2);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--colour-background);
+}
+
+#news_general .articles__content.bg-orange {
+    background-color : #BB5F44 !important;
+    border: 2px solid #BB5F44 !important;
+}
+#news_general .articles__content.bg-light-blue {
+    background-color : #8CB6BE !important;
+    border: 2px solid #8CB6BE !important;
+}
+#news_general .articles__content.bg-green {
+    background-color : #C1CA6D !important;
+    border: 2px solid #C1CA6D !important;
+}
+#news_general .articles__content.bg-yellow {
+    background-color : #e4dc99 !important;
+    border: 2px solid #e4dc99 !important;
+}
+
+#news_general .articles__content--lhs {
+  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
+  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
+}
+
+#news_general .articles__content--rhs {
+  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
+}
+
+#news_general .articles__title {
+  font-size: calc(var(--base-grid)*4);
+  line-height: 1.125;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+#news_general .articles__footer {
+  margin-top: auto;
+  font-size: calc(var(--base-grid)*2);
+  line-height: calc(var(--base-grid)*2);
+  display: flex;
+  justify-content: space-between;
+}
+
+#news_general .articles__link:hover .articles__content--rhs {
+  background-color: var(--colour-background-folded);
+  transform: rotateY(-50deg);
+}
+
+#news_general .articles__link:hover:after {
+  opacity: 1;
+  transform: translateX(calc(var(--base-grid)*1.5));
+  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
+}
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="90" >
 <!--PreLoader-->
@@ -197,10 +383,10 @@
         <div class="bgdefault  title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">فروعنا </h3>
+                    <h3 class="float-left">المركز الاعلامي </h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item hover-light text-bold">فروعنا </li>
+                        <li class="breadcrumb-item hover-light text-bold">المركز الاعلامي </li>
                     </ul>
                 </div>
             </div>
@@ -208,179 +394,66 @@
     </div>
 </section>
 
-<!-- Services us -->
-<section id="our-services" class="padding bglight">
-    <div class="container">
-        <div class="col-md-12 text-center heading_space wow fadeIn" data-wow-delay="300ms">
-            <h2 class="heading bottom30 darkcolor font-light2"><span class="font-weight-normal"></span> فروعنا
-                <span class="divider-center"></span>
-            </h2>
-            <div class="col-12">
-                <p class="mb-n3">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر</p>
+<section id="news_general" class="padding">
+   <div class="container">
+    <ol class="articles">
+        <!-- Loop through each article in the articles array -->
+        <!-- Use the index i to apply a custom CSS animation order -->
+        <!-- The article title, category, and date are displayed in two content divs -->
+        <!-- The second content div is hidden from screen readers using aria-hidden -->
+        <li class="articles__article before-orange" style="--animation-order: 1;">
+          <a href="news_list.html" class="articles__link after-orange">
+            <div class="articles__content bg-orange articles__content--lhs d-flex align-items-center justify-content-center">
+              <h2 class="articles__title text-center">الأخبار</h2>
             </div>
-        </div>
-        <div class="cardCustomDesign">
-            <section class="articles">
-                <article>
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel1.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>هيلتون العالمية</h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article>
-              
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel2.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>منتجعات كونراد </h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article>
-              
-                  <div class="article-wrapper">
-                    <figure>
-                      <img src="../images/hotel3.jpg" alt="" />
-                    </figure>
-                    <div class="article-body text-right">
-                      <h2>والدورف استوريا</h2>
-                      <p>
-                        كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                      </p>
-                      <a href="branch-detail.html" class="read-more">
-                         اقرأ المزيد 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <article>
-              
-                    <div class="article-wrapper">
-                      <figure>
-                        <img src="../images/hotel3.jpg" alt="" />
-                      </figure>
-                      <div class="article-body text-right">
-                        <h2>منتجعات كونراد 2</h2>
-                        <p>
-                          كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                        </p>
-                        <a href="branch-detail.html" class="read-more">
-                           اقرأ المزيد 
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-
-                  <article>
-              
-                    <div class="article-wrapper">
-                      <figure>
-                        <img src="../images/hotel3.jpg" alt="" />
-                      </figure>
-                      <div class="article-body text-right">
-                        <h2>والدورف استوريا 2</h2>
-                        <p>
-                          كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
-                        </p>
-                        <a href="branch-detail.html" class="read-more">
-                           اقرأ المزيد 
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-
-           
-              </section>
-        </div>
-        <!-- <div id="services-measonry" class="cbp">
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/209646075.jpg" width="350px" height="253.875px"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content brand text-center">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">هيلتون العالمية</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
+            <div class="articles__content bg-orange articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
+              <h2 class="articles__title text-center">الأخبار</h2>
             </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/Resorts-World-Las-Vegas_Exterior-scaled.jpg"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">منتجعات كونراد </a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
+          </a>
+        </li>
+        <li class="articles__article " style="--animation-order: 2;">
+          <a href="#" class="articles__link">
+            <div class="articles__content articles__content--lhs d-flex align-items-center justify-content-center">
+              <h2 class="articles__title text-center">الوسائط</h2>
             </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="../images/WaldorfAstoriaOrlando-Florida-CRHotel.webp"></div>
-                        <div class="overlay">
-                            <a href="branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="branch-detail.html">والدورف استوريا</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
+            <div class="articles__content articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
+              <h2 class="articles__title text-center">الوسائط</h2>
             </div>
-       
-        </div> -->
-    </div>
+          </a>
+        </li>
+        <li class="articles__article before-green" style="--animation-order: 3;">
+          <a href="#" class="articles__link after-green">
+            <div class="articles__content bg-green articles__content--lhs d-flex align-items-center justify-content-center">
+              <h2 class="articles__title text-center">التقارير</h2>
+            </div>
+            <div class="articles__content bg-green articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
+              <h2 class="articles__title text-center">التقارير</h2>
+            </div>
+          </a>
+        </li>
+        <li class="articles__article before-light-blue" style="--animation-order: 3;">
+            <a href="#" class="articles__link after-light-blue">
+              <div class="articles__content bg-light-blue articles__content--lhs d-flex align-items-center justify-content-center">
+                <h2 class="articles__title text-center">األنشطة</h2>
+              </div>
+              <div class="articles__content bg-light-blue articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
+                <h2 class="articles__title text-center">األنشطة</h2>
+              </div>
+            </a>
+          </li>
+          <li class="articles__article before-yellow" style="--animation-order: 3;">
+          <a href="#" class="articles__link after-yellow">
+            <div class="articles__content bg-yellow articles__content--lhs d-flex align-items-center justify-content-center">
+              <h2 class="articles__title text-center">اإلنجازات</h2>
+            </div>
+            <div class="articles__content bg-yellow articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
+              <h2 class="articles__title text-center">اإلنجازات</h2>
+            </div>
+          </a>
+        </li>
+      </ol>
+   </div>
 </section>
-<!-- Services us ends -->
-
 <!-- Contact US -->
 <section id="stayconnect1" class="bglight position-relative padding noshadow">
     <div class="container ">
@@ -444,6 +517,8 @@
 </section>
 <!-- Contact US ends -->
 
+
+
 <!--Site Footer Here-->
 <footer id="site-footer" class="position-relative bg-orange padding_top">
     <div class="svg-footer-top-holder">
@@ -474,22 +549,22 @@
                     <h3 class="whitecolor text-right bottom25">خدماتنا</h3>
                     <ul class="links">
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#header">الرئيسية</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">عن التعليم</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">اخر الاخبار</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">قبول الأطفال </a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">اتصل بنا</a></li>
                         <li class="text-right">
-                            <i class="fa-solid mx-1 fa-caret-left" style="color: #BB5F44;"></i>
+                            <i class="fa-solid mx-1 fa-caret-left" style="color: #ffb902;"></i>
                             <a href="#">سياسة الخصوصية</a></li>
                     </ul>
                 </div>

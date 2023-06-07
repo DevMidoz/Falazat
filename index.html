@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,18 +21,19 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
-    
+
 </head>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
-<!--PreLoader-->
-<div class="loader">
-    <div class="loader-spinner"></div>
-</div>
-<!--PreLoader Ends-->
-<!-- header -->
-<header class="site-header" id="header">
-    <nav class="navbar navbar-expand-lg transparent-bg static-nav ">
-        <!-- <div class="color-lines d-block">
+    <!--PreLoader-->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+    <!--PreLoader Ends-->
+    <!-- header -->
+    <header class="site-header" id="header">
+        <nav class="navbar navbar-expand-lg transparent-bg static-nav ">
+            <!-- <div class="color-lines d-block">
 
         <div class="row no-gutters top-color-bar height-30">
             <div class="col-4 bg-red"></div>
@@ -45,7 +47,22 @@
 
 
         </div> -->
-        <div class="container-fluid navbar-design" style="padding: 0px 90px;">
+            <div class="container navbar-design">
+                <div class="navbar-user">
+                    <img class="mx-2" src="kids/images/CEO.jpg" alt="Profile Logo">
+                    <ul class="navbar-nav customNav">
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> أحمد ياسر </a>
+                            <div class="dropdown-menu text-right p-3">
+                                <a class="dropdown-item" href="#"> <i class="fa fa-user blueColor "
+                                        aria-hidden="true"></i> الملف الشخصي</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-right-from-bracket blueColor"></i>
+                                    تسجيل خروج</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <a class="navbar-brand mr-auto mr-lg-0" href="index.html">
                     <img src="kids/images/falazat_ico_white.png" alt="logo" class="logo-default">
                     <img src="kids/images/logo_فلذات_-removebg-preview.png" alt="logo" class="logo-scrolled">
@@ -62,306 +79,344 @@
                             <a class="nav-link pagescroll" href="#our-apps">الخدمات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="https://docs.google.com/forms/d/e/1FAIpQLSeg0qg1NcOYfsmRfLRM8PBoR0x2OzcP6sj_O2fMwykQQECZow/viewform?usp=sf_link">الاكتتاب</a>
+                            <a class="nav-link " href="kids/html/Subscription.html">الاكتتاب</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="kids/html/branches.html">فروعنا</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="kids/html/news.html">المركز الاعلامي</a>
+                            <a class="nav-link" href="kids/html/news_new.html">المركز الاعلامي</a>
                         </li>
-                         <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="kids/html/stay_connect.html">اتصل بنا</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link " href="kids/html/careers.html">انضم الينا</a>
+                            <a class="nav-link " href="kids/html/careers.html">الوظائف</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link " href="kids/html/questionnare.html">رأيك يهمنا</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link " href="kids/html/login.html">تسجيل</a>
                         </li>
-                        
+
                     </ul>
                 </div>
-        </div>
-        <!--side menu open button-->
-        <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
-            <span></span> <span></span> <span></span>
-        </a>
+            </div>
+            <!--side menu open button-->
+            <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+                <span></span> <span></span> <span></span>
+            </a>
             <div class="sticky-nav-bottom-holder-svg">
                 <div class="svg-bottom"></div>
             </div>
-    </nav>
-    <!-- side menu -->
-    <div class="side-menu opacity-0 bg-red">
-        <div class="overlay"></div>
-        <div class="inner-wrapper">
-            <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
-            <nav class="side-nav w-100">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/about.html">حول</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/members.html">الأعضاء</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#our-apps">الخدمات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="https://docs.google.com/forms/d/e/1FAIpQLSeg0qg1NcOYfsmRfLRM8PBoR0x2OzcP6sj_O2fMwykQQECZow/viewform?usp=sf_link">الاكتتاب</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/branches.html">فروعنا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/stay_connect.html">اتصل بنا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/questionnare.html">رأيك يهمنا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="kids/html/login.html">تسجيل</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="side-footer w-100">
-                <ul class="social-icons-simple white top40">
-                    <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
-                    <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
-                    <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
-                </ul>
-                <p class="whitecolor">&copy; 2023 فلذات. Made With Love by Ahmed Yasser</p>
+        </nav>
+        <!-- side menu -->
+        <div class="side-menu opacity-0 bg-blue">
+            <div class="overlay"></div>
+            <div class="inner-wrapper">
+                <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+                <nav class="side-nav w-100" dir="rtl">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link collapsePagesSideMenu collapsed" data-toggle="collapse"
+                                href="#sideNavPages1" aria-expanded="false">
+                                <img class="mx-2 my-2" src="kids/images/CEO.jpg" alt="Profile Logo"> 
+                                 أحمد ياسر 
+                                 <i class="fas fa-chevron-down"></i> 
+                                </a>
+                            <div id="sideNavPages1" class="sideNavPages collapse">
+                                <ul class="navbar-nav mt-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i>
+                                            الملف الشخصي</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fas fa-right-from-bracket"></i> تسجيل
+                                            خروج</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/about.html">حول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/members.html">الأعضاء</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#our-apps">الخدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/Subscription.html">الاكتتاب</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/branches.html">فروعنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/careers.html">الوظائف</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids/html/news_new.html">المركز الاعلامي</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link " href="kids/html/stay_connect.html">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/questionnare.html">رأيك يهمنا</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link " href="kids/html/login.html">تسجيل</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="side-footer w-100">
+                    <ul class="social-icons-simple white top40">
+                        <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
+                    </ul>
+                    <p class="whitecolor">&copy; 2023 فلذات. Made With Love by Ahmed Yasser</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="close_side_menu" class="tooltip"></div>
-    <!-- End side menu -->
-</header>
-<!-- header -->
+        <div id="close_side_menu" class="tooltip"></div>
+        <!-- End side menu -->
+    </header>
+    <!-- header -->
 
 
 
 
-<!--MAIN SLIDER START-->
-<div id="slider-section" class="slider-section">
-    <div id="revo_main_wrapper" class="rev_slider_wrapper fullwidthbanner-container m-0 p-0" dir="ltr">
-        <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-        <div id="vertical-bullets" class="rev_slider fullwidthabanner white vertical-tpb" data-version="5.4.1">
-            <ul>
-                 <!-- SLIDE 2 -->
-                 <li class="slider-bg-2" data-index="rs-02" data-transition="fade" data-slotamount="default" data-easein="Power100.easeIn" data-easeout="Power100.easeOut" data-param1="02">
-                    <!-- MAIN IMAGE -->
-                    <div class="imageContainer" style="background-image: url('kids/images/2.webp');">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <!-- <img src="kids/images/2.webp"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['right','right','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-90','-40','-35','-35']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                         <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
-                    </div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['right','right','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-25','20','20','20']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <h1 class="font-xlight font-60 slider-middle-text"><span class="bluecolor"> الأطفال</span> <span class="redcolor">أنشطة</span></h1>
-                    </div>
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['right','right','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['40','95','90','90']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['right','right','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
-                    </div>
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['right','right','center','center']" data-hoffset="['0','0','0','15']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['110','170','160','170']"
-                         data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
-                    </div>
-                </li>
-                <!-- SLIDE 1 -->
-                <li data-index="rs-01" data-transition="fade" data-slotamount="default" data-easein="Power100.easeIn" data-easeout="Power100.easeOut"  data-param1="01">
-                    <!-- MAIN IMAGE -->
-                    <!-- <img src="kids/images/1.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
-                    <div class="imageContainer" style="background-image: url('kids/images/1.jpg');">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-90','-40','-35','-35']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
-                    </div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-25','20','20','20']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <h1 class="font-xlight font-60 slider-middle-text"><span class="redcolor">الاطفال</span> <span class="bluecolor">تعليم</span></h1>
-                    </div>
-
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['40','95','90','90']"
-                         data-width="none" data-height="none" data-type="text"
-                         data-textAlign="['left','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                         <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
+    <!--MAIN SLIDER START-->
+    <div id="slider-section" class="slider-section">
+        <div id="revo_main_wrapper" class="rev_slider_wrapper fullwidthbanner-container m-0 p-0" dir="ltr">
+            <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+            <div id="vertical-bullets" class="rev_slider fullwidthabanner white vertical-tpb" data-version="5.4.1">
+                <ul>
+                    <!-- SLIDE 2 -->
+                    <li class="slider-bg-2" data-index="rs-02" data-transition="fade" data-slotamount="default"
+                        data-easein="Power100.easeIn" data-easeout="Power100.easeOut" data-param1="02">
+                        <!-- MAIN IMAGE -->
+                        <div class="imageContainer" style="background-image: url('kids/images/2.webp');">
+                            <div class="card-overlay"></div>
                         </div>
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['left','center','center','center']" data-hoffset="['0','0','0','15']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['110','170','160','170']"
-                         data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                         data-textAlign="['center','center','center','center']"
-                         data-responsive_offset="on" data-start="1100"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
+                        <!-- <img src="kids/images/2.webp"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption tp-resizeme" data-x="['right','right','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-90','-40','-35','-35']" data-width="none" data-height="none"
+                            data-type="text" data-textAlign="['center','center','center','center']"
+                            data-responsive_offset="on" data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
+                        </div>
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption tp-resizeme" data-x="['right','right','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-25','20','20','20']" data-width="none" data-height="none" data-type="text"
+                            data-textAlign="['center','center','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <h1 class="font-xlight font-60 slider-middle-text"><span class="bluecolor"> الأطفال</span>
+                                <span class="redcolor">أنشطة</span>
+                            </h1>
+                        </div>
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption tp-resizeme" data-x="['right','right','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['40','95','90','90']" data-width="none" data-height="none" data-type="text"
+                            data-textAlign="['right','right','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت
+                                تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر
+                                ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
+                        </div>
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption tp-resizeme" data-x="['right','right','center','center']"
+                            data-hoffset="['0','0','0','15']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['110','170','160','170']" data-width="none" data-height="none"
+                            data-whitespace="nowrap" data-type="text"
+                            data-textAlign="['center','center','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
+                        </div>
+                    </li>
+                    <!-- SLIDE 1 -->
+                    <li data-index="rs-01" data-transition="fade" data-slotamount="default"
+                        data-easein="Power100.easeIn" data-easeout="Power100.easeOut" data-param1="01">
+                        <!-- MAIN IMAGE -->
+                        <!-- <img src="kids/images/1.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
+                        <div class="imageContainer" style="background-image: url('kids/images/1.jpg');">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="tp-caption tp-resizeme" data-x="['left','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-90','-40','-35','-35']" data-width="none" data-height="none"
+                            data-type="text" data-textAlign="['center','center','center','center']"
+                            data-responsive_offset="on" data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
+                        </div>
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption tp-resizeme" data-x="['left','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-25','20','20','20']" data-width="none" data-height="none" data-type="text"
+                            data-textAlign="['center','center','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <h1 class="font-xlight font-60 slider-middle-text"><span class="redcolor">الاطفال</span>
+                                <span class="bluecolor">تعليم</span>
+                            </h1>
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption tp-resizeme" data-x="['left','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['40','95','90','90']" data-width="none" data-height="none" data-type="text"
+                            data-textAlign="['left','center','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت
+                                تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر
+                                ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
+                        </div>
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption tp-resizeme" data-x="['left','center','center','center']"
+                            data-hoffset="['0','0','0','15']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['110','170','160','170']" data-width="none" data-height="none"
+                            data-whitespace="nowrap" data-type="text"
+                            data-textAlign="['center','center','center','center']" data-responsive_offset="on"
+                            data-start="1100"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
 
 
-                    </div>
-                </li>
-                <!-- SLIDE 3 -->
-                <li data-index="rs-03" data-transition="fade" data-slotamount="default" data-easein="Power100.easeIn" data-easeout="Power100.easeOut" data-param1="03">
-                    <!-- MAIN IMAGE -->
-                    <!-- <img src="kids/images/6.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
-                    <div class="imageContainer" style="background-image: url('kids/images/6.jpg');">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-90','-40','-35','-35']"
-                         data-whitespace="nowrap" data-responsive_offset="on"
-                         data-width="['none','none','none','none']" data-type="text"
-                         data-textalign="['center','center','center','center']"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
-                    </div>
+                        </div>
+                    </li>
+                    <!-- SLIDE 3 -->
+                    <li data-index="rs-03" data-transition="fade" data-slotamount="default"
+                        data-easein="Power100.easeIn" data-easeout="Power100.easeOut" data-param1="03">
+                        <!-- MAIN IMAGE -->
+                        <!-- <img src="kids/images/6.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
+                        <div class="imageContainer" style="background-image: url('kids/images/6.jpg');">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-90','-40','-35','-35']" data-whitespace="nowrap"
+                            data-responsive_offset="on" data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <!-- <h2 class="font-15 font-xlight slider-top-text">The best toddler academy in town</h2> -->
+                        </div>
 
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-25','20','20','20']"
-                         data-whitespace="nowrap" data-responsive_offset="on"
-                         data-width="['none','none','none','none']" data-type="text"
-                         data-textalign="['center','center','center','center']" data-fontsize="['48','48','20','26']"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <h1 class="font-xlight font-60 slider-middle-text"><span class="redcolor">الذهني</span> <span class="bluecolor">العصف</span></h1>
+                        <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['-25','20','20','20']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']" data-fontsize="['48','48','20','26']"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <h1 class="font-xlight font-60 slider-middle-text"><span class="redcolor">الذهني</span>
+                                <span class="bluecolor">العصف</span>
+                            </h1>
 
-                    </div>
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['40','95','90','90']"
-                         data-whitespace="nowrap" data-responsive_offset="on"
-                         data-width="['none','none','none','none']" data-type="text"
-                         data-textalign="['center','center','center','center']" data-fontsize="['16','16','16','16']"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                         <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
+                        </div>
+                        <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['40','95','90','90']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']" data-fontsize="['16','16','16','16']"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <p class="text-capitalize font-19 text-white text-bold slider-top-text font-xlight">إذا كنت
+                                تريد أن يكون أطفالك أذكياء ، فاقرأ لهم القصص الخيالية.<br> إذا كنت تريدهم أن يكونوا أكثر
+                                ذكاءً ، فاقرأ لهم المزيد من القصص الخيالية.</p>
 
-                    </div>
-                    <div class="tp-caption tp-resizeme"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['110','170','160','170']"
-                         data-width="['500','500','500','500']" data-textalign="['center','center','center','center']" data-type="text"
-                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                    <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
-                    </div>
+                        </div>
+                        <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['110','170','160','170']" data-width="['500','500','500','500']"
+                            data-textalign="['center','center','center','center']" data-type="text"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1100,"to":"o:1;","delay":0,"ease":"Power4.easeInOut"},{"delay":"wait","speed":0,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                            <a href="#about-us" class="btn yellow-blue-btn rounded-pill">أعرف اكثر</a>
+                        </div>
 
-                </li>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+
         </div>
 
+        <div class="svg-slider-bottom-holder">
+            <div class="svg-slider-bottom"></div>
+        </div>
+
+        <ul class="social-icons social-icons-simple revicon white d-none d-md-block d-lg-block">
+            <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a> </li>
+            <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+            <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i> </a> </li>
+            <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+        </ul>
     </div>
+    <!--Main SLIDER END -->
 
-    <div class="svg-slider-bottom-holder">
-        <div class="svg-slider-bottom"></div>
-    </div>
+    <!--Some Services-->
+    <div class="container" style="min-height: 316px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="services-slider" class="owl-carousel">
+                    <div class="item">
+                        <div class="service-box bg-orange">
+                            <span class="bottom25"><i class="fas fa-cubes"></i></span>
+                            <h4 class="bottom10 text-nowrap"><a href="javascript:void(0)" class="font-22">تنمية
+                                    العقل</a></h4>
+                            <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="service-box bg-light-blue">
+                            <span class="bottom25"><i class="fas fa-users"></i></span>
+                            <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">أنشطة اطفال</a></h4>
+                            <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="service-box bg-green">
+                            <span class="bottom25"><i class="far fa-building"></i></span>
+                            <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">مساحة العاب</a></h4>
+                            <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="service-box bg-blue">
+                            <span class="bottom25"><i class="fas fa-gamepad"></i></span>
+                            <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">ألعاب الكترونية</a></h4>
+                            <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="service-box bg-yellow">
+                            <span class="bottom25"><i class="fas fa-pen"></i></span>
+                            <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">كتابة ابداعية</a></h4>
+                            <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر. </p>
+                        </div>
+                    </div>
 
-    <ul class="social-icons social-icons-simple revicon white d-none d-md-block d-lg-block">
-        <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a> </li>
-        <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
-        <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i> </a> </li>
-        <li class="d-table"><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
-    </ul>
-</div>
-<!--Main SLIDER END -->
-
-<!--Some Services-->
-<div class="container" style="min-height: 316px;">
-    <div class="row">
-        <div class="col-md-12">
-            <div id="services-slider" class="owl-carousel">
-                <div class="item">
-                    <div class="service-box bg-orange">
-                        <span class="bottom25"><i class="fas fa-cubes"></i></span>
-                        <h4 class="bottom10 text-nowrap"><a href="javascript:void(0)" class="font-22">تنمية العقل</a></h4>
-                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف، </p>
-                    </div>
                 </div>
-                <div class="item">
-                    <div class="service-box bg-red">
-                        <span class="bottom25"><i class="fas fa-users"></i></span>
-                        <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">أنشطة اطفال</a></h4>
-                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف، </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="service-box bg-green">
-                        <span class="bottom25"><i class="far fa-building"></i></span>
-                        <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">مساحة العاب</a></h4>
-                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف، </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="service-box bg-blue">
-                        <span class="bottom25"><i class="fas fa-gamepad"></i></span>
-                        <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">ألعاب الكترونية</a></h4>
-                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف، </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="service-box bg-yellow">
-                        <span class="bottom25"><i class="fas fa-pen"></i></span>
-                        <h4 class="bottom10"><a href="javascript:void(0)" class="font-22">كتابة ابداعية</a></h4>
-                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف، </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-</div>
-<!--Some Services ends-->
-<!--Some Feature -->
-<!-- <section id="about" class="single-feature padding mt-n5">
+    <!--Some Services ends-->
+    <!--Some Feature -->
+    <!-- <section id="about" class="single-feature padding mt-n5">
     <div class="container">
         <div class="row">
             <div class="col-12 offset-lg-2 col-lg-8 wow fadeInUp" data-wow-delay="300ms">
@@ -372,466 +427,650 @@
         </div>
     </div>
 </section> -->
-<!--Some Feature ends-->
+    <!--Some Feature ends-->
 
-<!-- Testimonials -->
-<section id="our-testimonial" class="bglight padding_bottom">
-    <div class="svg-testimonial-top-holder">
-        <div class="svg-testimonial-top"></div>
-    </div>
-    <div class="parallax page-header testimonial-bg">
+    <!-- Testimonials -->
+    <section id="our-testimonial" class="bglight padding_bottom">
+        <div class="svg-testimonial-top-holder">
+            <div class="svg-testimonial-top"></div>
+        </div>
+        <div class="parallax page-header testimonial-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12 col-md-12 text-center">
+                        <div class="heading-title wow fadeInUp padding_testi" data-wow-delay="300ms">
+                            <h2 class="whitecolor font-normal">رئيس مجلس الادارة</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="owl-carousel" id="testimonial-slider">
+                <!--item 1-->
+                <div class="item testi-box">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <div class="testimonial-round d-inline-block">
+                                <img src="kids/images/CEO.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12  text-center">
+                            <p class="bottom15 testimional-para top15 w-50 ml-auto mr-auto">اجعل الطفل هو كاتب السيناريو
+                                والمخرج والممثل في مسرحيته.</p>
+                            <span class="d-inline-block test-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <h4 class="defaultcolor font-light top15"><a href="#.">محمد فايز</a></h4>
+                            <p>المدير التنفيذي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="svg-testimonial-bottom-holder">
+            <div class="svg-testimonial-bottom"></div>
+        </div>
+    </section>
+    <!--testimonials end-->
+
+    <!-- WOrk Process-->
+    <section id="our-process" class="padding bg-green">
+        <div class="svg-process-top-holder">
+            <div class="svg-process-top"></div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-12 col-md-12 text-center">
-                    <div class="heading-title wow fadeInUp padding_testi" data-wow-delay="300ms">
-                        <h2 class="whitecolor font-normal">رئيس مجل الادارة</h2>
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="heading-title whitecolor wow fadeInUp" data-wow-delay="300ms">
+                        <span>من اهم العوامل التي تساعد في تنمية الطفل </span>
+                        <h2 class="font-normal">تعليم الطفل </h2>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <ul class="process-wrapp">
+                    <li class="whitecolor wow fadeIn" data-wow-delay="300ms">
+                        <span class="pro-step bottom20">01</span>
+                        <p class="fontbold bottom20">الصف الاول</p>
+                        <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الاول مناهج متطورة و حديثة</p>
+                    </li>
+                    <li class="whitecolor wow fadeIn" data-wow-delay="400ms">
+                        <span class="pro-step bottom20">02</span>
+                        <p class="fontbold bottom20">الصف الثاني</p>
+                        <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الثاني مناهج متطورة و حديثة</p>
+                    </li>
+                    <li class="whitecolor wow fadeIn active" data-wow-delay="500ms">
+                        <span class="pro-step bottom20">03</span>
+                        <p class="fontbold bottom20">الصف الثالث</p>
+                        <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الثالث مناهج متطورة و حديثة</p>
+                    </li>
+                    <li class="whitecolor wow fadeIn" data-wow-delay="600ms">
+                        <span class="pro-step bottom20">04</span>
+                        <p class="fontbold bottom20">الصف الرابع</p>
+                        <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الرابع مناهج متطورة و حديثة</p>
+                    </li>
+                    <li class="whitecolor wow fadeIn" data-wow-delay="700ms">
+                        <span class="pro-step bottom20">05</span>
+                        <p class="fontbold bottom20">الصف الخامس</p>
+                        <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الخامس مناهج متطورة و حديثة</p>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="owl-carousel" id="testimonial-slider">
-            <!--item 1-->
-            <div class="item testi-box">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12 text-center">
-                        <div class="testimonial-round d-inline-block">
-                            <img src="kids/images/CEO.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12  text-center">
-                        <p class="bottom15 testimional-para top15 w-50 ml-auto mr-auto">اجعل الطفل هو كاتب السيناريو والمخرج والممثل في مسرحيته.</p>
-                        <span class="d-inline-block test-star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </span>
-                        <h4 class="defaultcolor font-light top15"><a href="#.">محمد فايز</a></h4>
-                        <p>المدير التنفيذي</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="svg-testimonial-bottom-holder">
-        <div class="svg-testimonial-bottom"></div>
-    </div>
-</section>
-<!--testimonials end-->
-
-<!-- WOrk Process-->
-<section id="our-process" class="padding bg-red">
-    <div class="svg-process-top-holder">
-        <div class="svg-process-top"></div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">
-                <div class="heading-title whitecolor wow fadeInUp" data-wow-delay="300ms">
-                    <span>من اهم العوامل التي تساعد في تنمية الطفل </span>
-                    <h2 class="font-normal">تعليم الطفل </h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <ul class="process-wrapp">
-                <li class="whitecolor wow fadeIn" data-wow-delay="300ms">
-                    <span class="pro-step bottom20">01</span>
-                    <p class="fontbold bottom20">الصف الاول</p>
-                    <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الاول مناهج متطورة و حديثة</p>
-                </li>
-                <li class="whitecolor wow fadeIn" data-wow-delay="400ms">
-                    <span class="pro-step bottom20">02</span>
-                    <p class="fontbold bottom20">الصف الثاني</p>
-                    <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الثاني مناهج متطورة و حديثة</p>
-                </li>
-                <li class="whitecolor wow fadeIn active" data-wow-delay="500ms">
-                    <span class="pro-step bottom20">03</span>
-                    <p class="fontbold bottom20">الصف الثالث</p>
-                    <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الثالث مناهج متطورة و حديثة</p>
-                </li>
-                <li class="whitecolor wow fadeIn" data-wow-delay="600ms">
-                    <span class="pro-step bottom20">04</span>
-                    <p class="fontbold bottom20">الصف الرابع</p>
-                    <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الرابع مناهج متطورة و حديثة</p>
-                </li>
-                <li class="whitecolor wow fadeIn" data-wow-delay="700ms">
-                    <span class="pro-step bottom20">05</span>
-                    <p class="fontbold bottom20">الصف الخامس</p>
-                    <p class="mt-n2 mt-sm-0">تعليم اطفال الصف الخامس مناهج متطورة و حديثة</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="svg-process-bottom-holder">
-        <div class="svg-process-bottom"></div>
-    </div>
-
-</section>
-<!--WOrk Process ends-->
-<!-- Mobile Apps -->
-<section id="our-apps" class="padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <div class="heading-title bottom30 wow fadeInLeft" data-wow-delay="200ms">
-                    <!-- <span class="defaultcolor text-center text-md-left">Quisque tellus risus, adipisci viverra</span> -->
-                    <h2 class="bottom30 darkcolor font-normal text-center text-md-left">كل طفل مهم</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex align-items-center" id="app-feature">
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="text-center text-md-left">
-                    <div class="feature-item mt-1 wow fadeInLeft" data-wow-delay="200ms">
-                        <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
-                        <div class="text">
-                            <h4 class="bottom15">
-                                <span class="d-inline-block">الانشطة الترفيهية</span>
-                            </h4>
-                            <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
-                        </div>
-                    </div>
-                    <div class="feature-item mt-5 wow fadeInLeft" data-wow-delay="250ms">
-                        <div class="icon"><i class="fas fa-swimmer"></i></div>
-                        <div class="text">
-                            <h4 class="bottom15">
-                                <span class="d-inline-block">السباحة</span>
-                            </h4>
-                            <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-4 col-sm-12 text-center">
-                <div class="image feature-item d-inline-block wow fadeIn my-5 my-md-0" data-wow-delay="400ms">
-                    <img src="kids/images/difference-between-kinder-1200x900.png" alt="mobile phones">
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="text-center text-md-right">
-                    <div class="feature-item mt-1 wow fadeInRight" data-wow-delay="200ms">
-                        <div class="icon"><i class="fas fa-book"></i></div>
-                        <div class="text">
-                            <h4 class="bottom15">
-                                <span class="d-inline-block">كورسات اونلاين</span>
-                            </h4>
-                            <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
-                        </div>
-                    </div>
-                    <div class="feature-item mt-5 wow fadeInRight" data-wow-delay="250ms">
-                        <div class="icon"><i class="fas fa-dumbbell"></i></div>
-                        <div class="text">
-                            <h4 class="bottom15">
-                                <span class="d-inline-block">الصحة / اللياقة البدنية</span>
-                            </h4>
-                            <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Mobile Apps ends-->
-<!-- Counters -->
-<section id="bg-counters" class="padding bg-counters bg-orange">
-    <div class="svg-counter-top-holder">
-        <div class="svg-counter-top"></div>
-    </div>
-    <div class="container">
-        <div class="row align-items-center text-center">
-            <div class="col-lg-4 col-md-4 col-sm-4 bottom10">
-                <div class="counters whitecolor  top10 bottom10">
-                    <span class="count_nums font-light" data-to="2022" data-speed="2500"> </span>
-                </div>
-                <h3 class="font-light whitecolor top20">بدأنا منذ</h3>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="kids-activity-holder">
-                <img src="kids/images/falazat_ico_white.png" alt="my paints image">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 bottom10">
-                <div class="counters whitecolor top10 bottom10">
-                    <span class="count_nums font-light" data-to="200" data-speed="2500"> </span>
-                </div>
-                <h3 class="font-light whitecolor top20">الاطفال في الفصول</h3>
-            </div>
-        </div>
-    </div>
-    <div class="svg-counter-bottom-holder">
-        <div class="svg-counter-bottom"></div>
-    </div>
-</section>
-<!-- Counters ends-->
-
-<!-- Our Branches -->
-<section id="our-services" class="padding bglight">
-    <div class="container">
-        <div class="col-md-12 text-center heading_space wow fadeIn" data-wow-delay="300ms">
-            <h2 class="heading bottom30 darkcolor font-light2"><span class="font-weight-normal"></span> فروعنا
-                <span class="divider-center"></span>
-            </h2>
-            <div class="col-12">
-                <p class="mb-n3">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر</p>
-            </div>
-        </div>
-        <!-- <div id="services-filter" class="cbp-l-filters dark bottom40 wow fadeIn d-table mx-auto" data-wow-delay="350ms">
-            <div data-filter="*" class="cbp-filter-item">
-                <span>All</span>
-            </div>
-            <div data-filter=".digital" class="cbp-filter-item">
-                <span>Digital</span>
-            </div>
-            <div data-filter=".design" class="cbp-filter-item">
-                <span>Design</span>
-            </div>
-            <div data-filter=".brand" class="cbp-filter-item">
-                <span>Brand</span>
-            </div>
-            <div data-filter=".graphics" class="cbp-filter-item">
-                <span>Graphics</span>
-            </div>
-        </div> -->
-        <div id="services-measonry" class="cbp">
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="kids/images/209646075.jpg" width="350px" height="253.875px"></div>
-                        <div class="overlay">
-                            <a href="kids/html/branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content brand text-center">
-                        <h3 class="bottom10 darkcolor"><a href="kids/html/branch-detail.html">هيلتون العالمية</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="kids/html/branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="kids/images/Resorts-World-Las-Vegas_Exterior-scaled.jpg"></div>
-                        <div class="overlay">
-                            <a href="kids/html/branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="kids/html/branch-detail.html">منتجعات كونراد </a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="kids/html/branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cbp-item ">
-                <div class="services-main">
-                    <div class="image bottom10">
-                        <div class="image"><img alt="SEO" src="kids/images/WaldorfAstoriaOrlando-Florida-CRHotel.webp"></div>
-                        <div class="overlay">
-                            <a href="../html/branch-detail.html" class="overlay_center border_radius"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="services-content text-center ">
-                        <h3 class="bottom10 darkcolor"><a href="../html/branch-detail.html">والدورف استوريا</a></h3>
-                        <p class="bottom15">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. 
-                        </p>
-                        <a href="../html/branch-detail.html" class="button-readmore">اقرأ المزيد</a>
-                    </div>
-                </div>
-            </div>
-       
+        <div class="svg-process-bottom-holder">
+            <div class="svg-process-bottom"></div>
         </div>
 
-        <div class="col-12 d-flex justify-content-center p-5">
-            <button  class="button gradient-btn ">اعرف اكثر</button>
-        </div>
-    </div>
-</section>
+    </section>
+    <!--WOrk Process ends-->
+    <!-- Mobile Apps -->
+    <section id="our-apps" class="padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="heading-title bottom30 wow fadeInLeft" data-wow-delay="200ms">
+                        <!-- <span class="defaultcolor text-center text-md-left">Quisque tellus risus, adipisci viverra</span> -->
+                        <h2 class="bottom30 darkcolor font-normal text-center text-md-left">كل طفل مهم</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center" id="app-feature">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="text-center text-md-left">
+                        <div class="feature-item mt-1 wow fadeInLeft" data-wow-delay="200ms">
+                            <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <div class="text">
+                                <h4 class="bottom15">
+                                    <span class="d-inline-block">الانشطة الترفيهية</span>
+                                </h4>
+                                <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
+                            </div>
+                        </div>
+                        <div class="feature-item mt-5 wow fadeInLeft" data-wow-delay="250ms">
+                            <div class="icon"><i class="fas fa-swimmer"></i></div>
+                            <div class="text">
+                                <h4 class="bottom15">
+                                    <span class="d-inline-block">السباحة</span>
+                                </h4>
+                                <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-12 text-center">
+                    <div class="image feature-item d-inline-block wow fadeIn my-5 my-md-0" data-wow-delay="400ms">
+                        <img src="kids/images/difference-between-kinder-1200x900.png" alt="mobile phones">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="text-center text-md-right">
+                        <div class="feature-item mt-1 wow fadeInRight" data-wow-delay="200ms">
+                            <div class="icon"><i class="fas fa-book"></i></div>
+                            <div class="text">
+                                <h4 class="bottom15">
+                                    <span class="d-inline-block">كورسات اونلاين</span>
+                                </h4>
+                                <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
+                            </div>
+                        </div>
+                        <div class="feature-item mt-5 wow fadeInRight" data-wow-delay="250ms">
+                            <div class="icon"><i class="fas fa-dumbbell"></i></div>
+                            <div class="text">
+                                <h4 class="bottom15">
+                                    <span class="d-inline-block">الصحة / اللياقة البدنية</span>
+                                </h4>
+                                <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) </p>
 
-<section id="pricing" class="padding bglight" dir="ltr">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">
-                <div class="heading-title darkcolor wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                    <span class="defaultcolor">كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر </span>
-                    <h2 class="font-normal heading_space_half"> المركز الاعلامي </h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="owl-carousel owl-theme no-dots owl-loaded owl-drag" id="price-slider">
-            
-            
-            
-            
-        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1480px;"><div class="owl-item active" style="width: 370px;"><div class="item">
-                <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp sale animated" data-wow-delay="300ms" data-sale="30" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                        <i class="fa fa-newspaper-o fa-10x defaultcolor" ></i>
-                        
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">الأخبار</span></div>
+    </section>
+    <!--Mobile Apps ends-->
+    <!-- Counters -->
+    <section id="bg-counters" class="padding bg-counters bg-orange">
+        <div class="svg-counter-top-holder">
+            <div class="svg-counter-top"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 bottom10">
+                    <div class="counters whitecolor  top10 bottom10">
+                        <span class="count_nums font-light" data-to="2022" data-speed="2500"> </span>
+                    </div>
+                    <h3 class="font-light whitecolor top20">بدأنا منذ</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="kids-activity-holder">
+                        <img src="kids/images/falazat_ico_white.png" alt="my paints image">
                     </div>
                 </div>
-            </div></div><div class="owl-item active" style="width: 370px;"><div class="item">
-                <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp sale animated" data-wow-delay="300ms" data-sale="30" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                        <i class="fa fa-file-text fa-10x "></i>
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">الوسائط</span></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 bottom10">
+                    <div class="counters whitecolor top10 bottom10">
+                        <span class="count_nums font-light" data-to="200" data-speed="2500"> </span>
                     </div>
+                    <h3 class="font-light whitecolor top20">الاطفال في الفصول</h3>
                 </div>
-            </div></div><div class="owl-item active" style="width: 370px;"><div class="item">
-                <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp sale animated" data-wow-delay="300ms" data-sale="30" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                        <i class="fab fa-twitter fa-10x" style="color: #1DA1F2;"></i>
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">تغريدات تويتر</span></div>
-                    </div>
+            </div>
+        </div>
+        <div class="svg-counter-bottom-holder">
+            <div class="svg-counter-bottom"></div>
+        </div>
+    </section>
+    <!-- Counters ends-->
+
+    <!-- Our Branches -->
+    <section id="our-services" class="padding bglight">
+        <div class="container">
+            <div class="col-md-12 text-center heading_space wow fadeIn" data-wow-delay="300ms">
+                <h2 class="heading bottom30 darkcolor font-light2"><span class="font-weight-normal"></span> فروعنا
+                    <span class="divider-center"></span>
+                </h2>
+                <div class="col-12">
+                    <p class="mb-n3">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في
+                        صناعات المطابع ودور النشر</p>
                 </div>
-            </div></div><div class="owl-item" style="width: 370px;"><div class="item">
-                <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp sale animated" data-wow-delay="300ms" data-sale="30" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">الأخبار</span></div>
-                    </div>
-                </div>
-            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
-   
+            </div>
+            <div class="cardCustomDesign">
+                <section class="articles">
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="kids/images/hotel1.jpg" alt="" />
+                            </figure>
+                            <div class="article-body text-right">
+                                <h2>هيلتون العالمية</h2>
+                                <p>
+                                    كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة
+                                    مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
+                                </p>
+                                <a href="kids/html/branch-detail.html" class="read-more">
+                                    اعرف اكثر
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="kids/images/hotel2.jpg" alt="" />
+                            </figure>
+                            <div class="article-body text-right">
+                                <h2>منتجعات كونراد</h2>
+                                <p>
+                                    كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة
+                                    مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
+                                </p>
+                                <a href="kids/html/branch-detail.html" class="read-more">
+                                    اعرف اكثر
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="kids/images/hotel3.jpg" alt="" />
+                            </figure>
+                            <div class="article-body text-right">
+                                <h2>والدورف استوريا</h2>
+                                <p>
+                                    كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة
+                                    مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
+                                </p>
+                                <a href="kids/html/branch-detail.html" class="read-more">
+                                    اعرف اكثر
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <div class="col-12 d-flex justify-content-center p-5">
-                <a  class="button gradient-btn "  href="kids/html/news.html" >اعرف اكثر</a>
+                <a class="button gradient-btn " href="kids/html/branches.html">اعرف اكثر</a>
             </div>
         </div>
-</section>
+    </section>
 
-
-
-<!--Site Footer Here-->
-<footer id="site-footer" class="position-relative bg-red padding_top">
-    <div class="svg-footer-top-holder">
-        <div class="svg-footer-top"></div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 ">
-                <div class="footer_panel padding_bottom_half bottom20 text-center">
-                    <a href="index.html" class="footer_logo bottom25"><img src="kids/images/falazat_ico_white.png" alt="MegaOne"></a>
-                    <p class="whitecolor bottom25">ابتعد عن الأشخاص الذين يحاولون التقليل من شأن طموحاتك.</p>
-                    <div class="d-table w-100 address-item whitecolor bottom25" dir="ltr">
-                        <span class="d-table-cell align-middle"><i class="fas fa-mobile-alt"></i></span>
-                        <p class="d-table-cell align-middle bottom0">
-                            +20-1097700741 <a class="d-block" href="mailto:web@support.com">falazat@gmail.com</a>
-                        </p>
+    <!-- Counters -->
+    <section id="bg-counters" class="padding pb-0 bg-counters bg-blue newsCenter">
+        <div class="svg-counter-top-holder">
+            <div class="svg-counter-top"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="heading-title whitecolor wow fadeInUp" data-wow-delay="300ms"
+                        style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <h2 class="font-normal heading_space_half"> المركز الاعلامي </h2>
+                        <span class="whitecolor">كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر
+                        </span>
                     </div>
-                    <ul class="social-icons white wow fadeInUp" data-wow-delay="300ms">
-                        <li><a href="javascript:void(0)" class=""><i class="fab fa-facebook-f"></i> </a> </li>
-                        <li><a href="javascript:void(0)" class=""><i class="fab fa-twitter"></i> </a> </li>
-                        <li><a href="javascript:void(0)" class=""><i class="fab fa-linkedin-in"></i> </a> </li>
-                        <li><a href="javascript:void(0)" class=""><i class="fab fa-instagram"></i> </a> </li>
-                    </ul>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-6 px-5">
-                 <div class="footer_panel d-flex flex-column "><!-- padding_bottom_half bottom20 pl-0 pl-lg-5 -->
-                    <h3 class="whitecolor text-right bottom25">خدماتنا</h3>
-                    <div class="d-flex justify-content-between">
-                        <ul class="links">
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#header">الرئيسية</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="kids/html/careers.html">التوظيف</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">اخر الاخبار</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">قبول الأطفال </a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">اتصل بنا</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">سياسة الخصوصية</a></li>
-                        </ul>
-                        <ul class="links">
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#header">الرئيسية</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="kids/html/careers.html">التوظيف</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">اخر الاخبار</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">قبول الأطفال </a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">اتصل بنا</a></li>
-                            <li class="text-right">
-                                <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
-                                <a href="#">سياسة الخصوصية</a></li>
-                        </ul>
+            <div class="row pt-3">
+                <div class="col-md-4 col-sm-12">
+                    <div class="widget p-4 heading_space_half shadow-equal wow fadeIn bg-light-blue "
+                        data-wow-delay="350ms">
+                        <h4 class="text-capitalize whitecolor bottom20 text-center text-md-right">اخر الاخبار</h4>
+                        <div class="single_post d-table bottom15">
+                            <a href="#." class="post"><img
+                                    src="kids/images/WLT_A-Day-in-the-Life-of-Jeff-Bezos_w2xsjl-e1612343354223.jpg"
+                                    alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">25 ابريل 2023</span>
+                            </div>
+                        </div>
+                        <div class="single_post bottom15">
+                            <a href="#." class="post"><img src="kids/images/billgatesheadshot.jpg" alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">20 سبتمبر 2022</span>
+                            </div>
+                        </div>
+                        <div class="single_post d-table bottom15">
+                            <a href="#." class="post"><img src="kids/images/CEO.jpg" alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">5 مايو 2023</span>
+                            </div>
+                        </div>
+                        <div class="single_post d-table bottom15">
+                            <a href="#." class="post"><img
+                                    src="kids/images/WLT_A-Day-in-the-Life-of-Jeff-Bezos_w2xsjl-e1612343354223.jpg"
+                                    alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">5 مايو 2023</span>
+                            </div>
+                        </div>
+                        <div class="single_post d-table bottom15">
+                            <a href="#." class="post"><img src="kids/images/billgatesheadshot.jpg" alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">5 مايو 2023</span>
+                            </div>
+                        </div>
+                        <div class="single_post d-table bottom15">
+                            <a href="#." class="post"><img src="kids/images/CEO.jpg" alt="post image"></a>
+                            <div class="text text-right px-2">
+                                <a href="#." class="text-white">لوريم إيبسوم هو ببساطة نص شكلي</a>
+                                <span class="text-white">5 مايو 2023</span>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
+                <div class="col-md-8 col-sm-12" id="blog">
+                    <article class="blog-item heading_space wow fadeIn text-center text-md-right" data-wow-delay="300ms"
+                        style="visibility: visible; animation-delay: 300ms; animation-name: fadeIn;">
+                        <div class="image"><img src="kids/images/children_920 X 400.jpg" alt="blog"
+                                class="border_radius"></div>
+                        <h3 class="text-white font-light bottom10 top30"> <a href="kids/html/news-details.html">لوريم
+                                إيبسوم هو ببساطة نص شكلي</a></h3>
+                        <ul class="commment">
+                            <li><a href="#." class="text-white"><i class="fas fa-calendar px-1"></i>8 يناير</a></li>
+                            <li><a href="#." class="text-white"><i class="fas fa-comments px-1"></i> 19 تعليق</a></li>
+                            <li><a href="#." class="text-white"><i class="fas fa-user px-1"></i> أحمد</a></li>
+                        </ul>
+                        <p class="top15 whitecolor">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس
+                            المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
+                            منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص،
+                            لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. </p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center p-5">
+                <a class="button gradient-btn " href="kids/html/news_new.html">اعرف اكثر</a>
+            </div>
+        </div>
+        <div class="svg-counter-bottom-holder">
+            <div class="svg-counter-bottom"></div>
+        </div>
+    </section>
+    <!-- Counters ends-->
+
+
+
+    <!-- Contact US -->
+    <section id="stayconnect1" class="bglight position-relative padding noshadow">
+        <div class="container ">
+            <div class="widget ">
+                <div class="row">
+                    <div class="col-md-12 text-center wow fadeIn mt-n3" data-wow-delay="300ms">
+                        <h2 class="heading bottom30 darkcolor font-light2 pt-1"><span class="font-normal">اتصل
+                                بنا</span>
+                            <span class="divider-center"></span>
+                        </h2>
+                        <div class="col-12 bottom35">
+                            <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+                                المطابع ودور النشر.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 order-sm-2">
+                        <div class="imageContainer wow fadeInLeft"
+                            style="background-image: url('kids/images/pexels-markus-spiske-1300-750.jpg');">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="heading-title  wow fadeInUp" data-wow-delay="300ms">
+                            <form class=" wow fadeInUp" data-wow-delay="400ms" id="contact-form-data">
+                                <div class="row px-2">
+                                    <div class="col-md-12 col-sm-12" id="result"></div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="name1" class="d-none"></label>
+                                            <input class="form-control" id="name1" type="text" placeholder="الاسم :"
+                                                required name="userName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="email1" class="d-none"></label>
+                                            <input class="form-control" type="email" id="email1"
+                                                placeholder="البريد الالكتروني:" name="userEmail">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group  ">
+                                            <select class="form-select form-control" required id="gender">
+                                                <option selected>نوع التواصل :</option>
+                                                <option value="complaints">شكاوى</option>
+                                                <option value="suggestions">اقتراحات</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="message1" class="d-none"></label>
+                                            <textarea class="form-control" id="message1" placeholder="الرسالة :"
+                                                required name="userMessage"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <button type="button" id="submit_btn1"
+                                            class="contact_btn button gradient-btn w-100">ارسال</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact US ends -->
+
+
+
+    <!--Site Footer Here-->
+    <footer id="site-footer" class="position-relative bg-orange padding_top">
+        <div class="svg-footer-top-holder">
+            <div class="svg-footer-top"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="footer_panel padding_bottom_half bottom20 text-center">
+                        <a href="index.html" class="footer_logo bottom25"><img src="kids/images/falazat_ico_white.png"
+                                alt="MegaOne"></a>
+                        <!-- <p class="whitecolor bottom25">ابتعد عن الأشخاص الذين يحاولون التقليل من شأن طموحاتك.</p> -->
+                        <div class="d-table w-100 address-item whitecolor bottom25" dir="ltr">
+                            <!-- <span class="d-table-cell align-middle"><i class="fas fa-mobile-alt"></i></span> -->
+                            <p class="d-table-cell align-middle bottom0">
+                                +20-1097700741 <a class="d-block" href="mailto:web@support.com">falazat@gmail.com</a>
+                            </p>
+                        </div>
+                        <!-- <ul class="social-icons-simple white wow fadeInUp" data-wow-delay="300ms">
+                            <li><a href="javascript:void(0)" class=""><i class="fab fa-facebook-f"></i> </a> </li>
+                            <li><a href="javascript:void(0)" class=""><i class="fab fa-twitter"></i> </a> </li>
+                            <li><a href="javascript:void(0)" class=""><i class="fab fa-linkedin-in"></i> </a> </li>
+                            <li><a href="javascript:void(0)" class=""><i class="fab fa-instagram"></i> </a> </li>
+                        </ul> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 px-5">
+                    <div class="footer_panel d-flex flex-column "><!-- padding_bottom_half bottom20 pl-0 pl-lg-5 -->
+                        <h3 class="whitecolor text-right bottom25">خريطة الموقع</h3>
+                           <div class="d-flex justify-content-between">
+                                <ul class="links">
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="#header">الرئيسية</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="kids/html/careers.html">التوظيف</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="kids/html/news_new.html">اخر الاخبار</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="kids/html/policies_regulations.html"> السياسات و اللوائح</a></li>
+                                    </li>
+                                   
+                                </ul>
+                                <ul class="links">
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="#">الأعضاء</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="#">الأكتتاب</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="#header">المركز الاعلامي</a>
+                                    </li>
+                                    <li class="text-right">
+                                        <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
+                                        <a href="#">اتصل بنا</a>
+                                    </li>
+                                </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="footer_panel d-flex flex-column "><!-- padding_bottom_half bottom20 pl-0 pl-lg-5 -->
+                        <div class="d-flex justify-content-between">
+                         <div>
+                             <h3 class="whitecolor text-right bottom25">تابعنا</h3>
+                             <ul class="links">
+                                 <li class="text-right">
+                                    <i class="fab fa-facebook-f mx-1 text-white" ></i>
+                                     <a href="#header"> فيسبوك</a>
+                                 </li>
+                                 <li class="text-right">
+                                    <i class="fab fa-twitter mx-1 text-white" ></i>
+                                     <a href="kids/html/careers.html">تويتر</a>
+                                 </li>
+                                 <li class="text-right">
+                                    <i class="fab fa-instagram mx-1 text-white" ></i>
+                                     <a href="kids/html/news_new.html">انستجرام</a>
+                                 </li>
+                                 <li class="text-right">
+                                    <i class="fab fa-linkedin-in mx-1 text-white" ></i>
+                                     <a href="kids/html/policies_regulations.html"> لينكد ان</a></li>
+                                 </li>
+                                
+                             </ul>
+                         </div>
+                         <!-- <div>
+                             <h3 class="whitecolor text-right bottom25">العنوان</h3>
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2159.2998129223547!2d39.61092254870293!3d24.468302134500412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbfaa728d4c15%3A0x39c9cca9e8b98e2f!2sAl%20Masjid%20an%20Nabawi!5e0!3m2!1sen!2sus!4v1685962791682!5m2!1sen!2sus"  height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div> -->
+                     </div>
                   
+
+                 </div>
+                    <!-- <div class="footer_panel padding_bottom_half bottom20">
+                        <h3 class="whitecolor text-right bottom25">ساعات العمل</h3>
+                        <p class="whitecolor text-right bottom25">دعمنا متاح لمساعدتك 24 ساعة في اليوم ، سبعة أيام في
+                            الأسبوع</p>
+                        <ul class="hours_links whitecolor">
+                            <li><span>الخميس-السبت</span> <span>8.00-17.00</span></li>
+                            <li><span>الجمعة</span> <span>مغلق</span></li>
+                            <li><span>الفاعليات</span> <span>مغلق</span></li>
+                        </ul>
+                    </div> -->
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="footer_panel padding_bottom_half bottom20">
-                    <h3 class="whitecolor text-right bottom25">ساعات العمل</h3>
-                    <p class="whitecolor text-right bottom25">دعمنا متاح لمساعدتك 24 ساعة في اليوم ، سبعة أيام في الأسبوع</p>
-                    <ul class="hours_links whitecolor">
-                        <li><span>الخميس-السبت</span> <span>8.00-17.00</span></li>
-                        <li><span>الجمعة</span> <span>مغلق</span></li>
-                        <li><span>الفاعليات</span> <span>مغلق</span></li>
-                    </ul>
-                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                   
+                             <h3 class="whitecolor text-right bottom25">العنوان</h3>
+                             <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 135 شارع التحرير , القاهرة </p>
+                             <p class="text-right text-white"> <i class="fas fas fa-mobile-alt text-white"></i> +20-1097700741</p>
+                             <p class="text-right text-white"> <i class="fas fa-envelope text-white"></i> <a class="d-inline-block " href="mailto:web@support.com">falazat@gmail.com</a></p>
+
+                     </div>
             </div>
         </div>
-    </div>
-</footer>
-<!--Footer ends-->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="vendor/js/bundle.min.js"></script>
-<!--to view items on reach-->
-<script src="vendor/js/jquery.appear.js"></script>
-<!--Owl Slider-->
-<script src="vendor/js/owl.carousel.min.js"></script>
-<!--Parallax Background-->
-<script src="vendor/js/parallaxie.min.js"></script>
-<!--Cubefolio Gallery-->
-<script src="vendor/js/jquery.cubeportfolio.min.js"></script>
-<!--Fancybox js-->
-<script src="vendor/js/jquery.fancybox.min.js"></script>
-<!--wow js-->
-<script src="vendor/js/wow.min.js"></script>
-<!--number counters-->
-<script src="kids/js/jquery-countTo.js"></script>
-<!--tooltip js-->
-<script src="kids/js/tooltipster.min.js"></script>
-<!-- REVOLUTION JS FILES -->
-<script src="vendor/js/jquery.themepunch.tools.min.js"></script>
-<script src="vendor/js/jquery.themepunch.revolution.min.js"></script>
-<!-- SLIDER REVOLUTION EXTENSIONS -->
-<script src="vendor/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="vendor/js/extensions/revolution.extension.video.min.js"></script>
-<!-- font awesome -->
-<script src="https://kit.fontawesome.com/385d561a40.js" crossorigin="anonymous"></script>
-<!--custom functions and script-->
-<script src="kids/js/functions.js"></script>
+    </footer>
+    <a href="kids/html/questionnare.html" class="floating-btn questionnareFloat">
+        <span class="initial-icon">
+            <i class="fa fa-comment-dots"></i>
+        </span>
+        <span class="hover-text">رأيك يهمنا</span>
+    </a>
+
+    <a href="kids/html/stay_connect.html" class="floating-btn contactUsFloat">
+        <span class="initial-icon">
+            <i class="fa fa-phone"></i>
+        </span>
+        <span class="hover-text">أتصل بنا</span>
+    </a>
+
+
+    <!--Footer ends-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendor/js/bundle.min.js"></script>
+    <!--to view items on reach-->
+    <script src="vendor/js/jquery.appear.js"></script>
+    <!--Owl Slider-->
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <!--Parallax Background-->
+    <script src="vendor/js/parallaxie.min.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="vendor/js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="vendor/js/jquery.fancybox.min.js"></script>
+    <!--wow js-->
+    <script src="vendor/js/wow.min.js"></script>
+    <!--number counters-->
+    <script src="kids/js/jquery-countTo.js"></script>
+    <!--tooltip js-->
+    <script src="kids/js/tooltipster.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="vendor/js/jquery.themepunch.tools.min.js"></script>
+    <script src="vendor/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS -->
+    <script src="vendor/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="vendor/js/extensions/revolution.extension.video.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/385d561a40.js" crossorigin="anonymous"></script>
+    <!--custom functions and script-->
+    <script src="kids/js/functions.js"></script>
 </body>
+
 </html>

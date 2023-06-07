@@ -35,7 +35,21 @@
 
 .navbar-design{
     margin-top: 10px;
+    padding: 0px 15px;
 }
+.navbar-design .navbar-user{
+    display: flex;
+    align-items: center;
+}
+.navbar-design .navbar-user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+
+
 /*-----SVG STICKY MENU  -----*/
 
 
@@ -58,6 +72,13 @@
     height: 26px;
 }
 
+
+.side-nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 /*side menu*/
 
 
@@ -93,11 +114,11 @@
     top:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    /* z-index: 11111; */
 }
 
 .svg-process-top-holder .svg-process-top{
-    background: url('../images/zig-line-red.svg');
+    background: url('../images/zig-line-green.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
@@ -108,12 +129,12 @@
     bottom:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    /* z-index: 11111; */
     transform: rotate(180deg);
 }
 
 .svg-process-bottom-holder .svg-process-bottom{
-    background: url('../images/zig-line-red.svg');
+    background: url('../images/zig-line-green.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
@@ -126,7 +147,7 @@
     top:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    /* z-index: 11111; */
 }
 
 .svg-principles-top-holder .svg-principles-top{
@@ -141,7 +162,7 @@
     bottom:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    /* z-index: 11111; */
     transform: rotate(180deg);
 }
 
@@ -160,7 +181,7 @@
     top:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+     /* z-index: 11111; */ 
 }
 
 .svg-counter-top-holder .svg-counter-top{
@@ -169,17 +190,29 @@
     height: 26px;
 }
 
+.newsCenter .svg-counter-top-holder .svg-counter-top{
+    background: url('../images/zig-line-blue.svg');
+    background-repeat: repeat-x;
+    height: 26px;
+}
+
 .svg-counter-bottom-holder{
     position: absolute;
-    bottom:-22px;
+    bottom:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    z-index: 1;
     transform: rotate(180deg);
 }
 
 .svg-counter-bottom-holder .svg-counter-bottom{
     background: url('../images/zig-line-orange.svg');
+    background-repeat: repeat-x;
+    height: 26px;
+}
+
+.newsCenter .svg-counter-bottom-holder .svg-counter-bottom{
+    background: url('../images/zig-line-blue.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
@@ -213,11 +246,11 @@
     top:-21px;
     right: 0;
     left: 0;
-    z-index: 11111;
+    /* z-index: 11111; */
 }
 
 .svg-testimonial-top-holder .svg-testimonial-top{
-    background: url('../images/zig-line-green.svg');
+    background: url('../images/zig-line-light-blue.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
@@ -225,14 +258,14 @@
 
 .svg-testimonial-bottom-holder{
     position: absolute;
-    bottom: 359px;
+    bottom: 312px;
     right: 0;
     left: 0;
     transform: rotate(180deg);
 }
 
 .svg-testimonial-bottom-holder .svg-testimonial-bottom{
-    background: url('../images/zig-line-green.svg');
+    background: url('../images/zig-line-light-blue.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
@@ -251,7 +284,7 @@
 }
 
 .svg-footer-top-holder .svg-footer-top{
-    background: url('../images/zig-line-red.svg');
+    background: url('../images/zig-line-orange.svg');
     background-repeat: repeat-x;
     height: 26px;
 }
