@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | السياسات و اللوائح </title>
+    <title> فلذات | الوسائط </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -21,54 +21,184 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
-<style>
+    <style>
+        #gallery-list .hello {
+            opacity: 1 !important;
+        }
 
-#policies .a-box {
-  display: inline-block;
-  width: 240px;
-  text-align: center;
-}
+        #gallery-list .full {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
 
-#policies .img-container {
-    height: 230px;
-    width: 200px;
-    overflow: hidden;
-    border-radius: 0px 0px 20px 20px;
-    display: inline-block;
-}
+        #gallery-list .full .content {
+            background-color: rgba(0, 0, 0, 0.75) !important;
+            height: 100%;
+            width: 100%;
+            display: grid;
+        }
 
-#policies .img-container img {
-    margin: 15%;
-}
+        #gallery-list .full .content img {
+            left: 50%;
+            transform: translate3d(0, 0, 0);
+            animation: zoomin 1s ease;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
 
-#policies .inner-skew {
-    display: inline-block;
-    border-radius: 20px;
-    overflow: hidden;
-    padding: 0px;
-    font-size: 0px;
-    margin: 30px 0px 0px 0px;
-    /* background: #c8c2c2; */
-    height: 250px;
-    width: 200px;
-}
+        #gallery-list .byebye {
+            opacity: 0;
+        }
 
-#policies .text-container {
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-  padding: 90px 20px 20px 20px;
-  border-radius: 20px;
-  background: #fff;
-  margin: -120px 0px 0px 0px;
-  line-height: 19px;
-  font-size: 14px;
-}
+        #gallery-list .byebye:hover {
+            transform: scale(0.2) !important;
+        }
 
-#policies .text-container h3 {
-  margin: 20px 0px 10px 0px;
-  color: #04bcff;
-  font-size: 18px;
-}
-</style>
+        #gallery-list .gallery {
+            display: grid;
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 8px;
+        }
+
+        #gallery-list .gallery img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 16px #333;
+            transition: all 1.5s ease;
+        }
+
+        #gallery-list .gallery img:hover {
+            box-shadow: 0 0 32px #333;
+        }
+
+        #gallery-list .gallery .content {
+            padding: 4px;
+        }
+
+        #gallery-list .gallery .gallery-item {
+            transition: grid-row-start 300ms linear;
+            transition: transform 300ms ease;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        #gallery-list .gallery .gallery-item:hover {
+            transform: scale(1.025);
+        }
+
+        @media (max-width: 600px) {
+            #gallery-list .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            }
+        }
+
+        @media (max-width: 400px) {
+            #gallery-list .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+            }
+        }
+
+        @-moz-keyframes zoomin {
+            0% {
+                max-width: 50%;
+                transform: rotate(-30deg);
+                filter: blur(4px);
+            }
+
+            30% {
+                filter: blur(4px);
+                transform: rotate(-80deg);
+            }
+
+            70% {
+                max-width: 50%;
+                transform: rotate(45deg);
+            }
+
+            100% {
+                max-width: 100%;
+                transform: rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes zoomin {
+            0% {
+                max-width: 50%;
+                transform: rotate(-30deg);
+                filter: blur(4px);
+            }
+
+            30% {
+                filter: blur(4px);
+                transform: rotate(-80deg);
+            }
+
+            70% {
+                max-width: 50%;
+                transform: rotate(45deg);
+            }
+
+            100% {
+                max-width: 100%;
+                transform: rotate(0deg);
+            }
+        }
+
+        @-o-keyframes zoomin {
+            0% {
+                max-width: 50%;
+                transform: rotate(-30deg);
+                filter: blur(4px);
+            }
+
+            30% {
+                filter: blur(4px);
+                transform: rotate(-80deg);
+            }
+
+            70% {
+                max-width: 50%;
+                transform: rotate(45deg);
+            }
+
+            100% {
+                max-width: 100%;
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                max-width: 50%;
+                transform: rotate(-30deg);
+                filter: blur(4px);
+            }
+
+            30% {
+                filter: blur(4px);
+                transform: rotate(-80deg);
+            }
+
+            70% {
+                max-width: 50%;
+                transform: rotate(45deg);
+            }
+
+            100% {
+                max-width: 100%;
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -135,8 +265,8 @@
                             <a class="nav-link" href="news_new.html">المركز الاعلامي</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="committes-types.html">اللجان</a>
-                    </li>
+                            <a class="nav-link" href="committes-types.html">اللجان</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link " href="careers.html">الوظائف</a>
                         </li>
@@ -207,9 +337,9 @@
                             <a class="nav-link" href="news_new.html">المركز الاعلامي</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="committes-types.html">اللجان</a>
-                    </li>
-                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="committes-types.html">اللجان</a>
+                        </li>
+                        <!-- <li class="nav-item">
                         <a class="nav-link " href="questionnare.html">رأيك يهمنا</a>
                     </li> -->
                         <li class="nav-item">
@@ -246,11 +376,11 @@
             <div class="bgdefault  title-wrap mt-n5">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 whitecolor">
-                        <h3 class="float-left">السياسات و اللوائح </h3>
+                        <h3 class="float-left">الوسائط </h3>
                         <ul class="breadcrumb top10 bottom10 float-right">
                             <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a>
                             </li>
-                            <li class="breadcrumb-item hover-light text-bold">السياسات و اللوائح </li>
+                            <li class="breadcrumb-item hover-light text-bold">الوسائط </li>
                         </ul>
                     </div>
                 </div>
@@ -258,231 +388,86 @@
         </div>
     </section>
 
-    <section id="policies" class="padding">
+    <section id="gallery-list" class="padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/pdf.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="gallery" id="gallery">
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,care" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/word.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,studied" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/text-file.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,substance" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/pdf.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,choose" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/pdf.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,past" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/word.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,lamp" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/text-file.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,yet" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/pdf.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,eight" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/word.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,crew" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/text-file.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,event" alt=""></div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                    <div class="a-box">
-                        <div class="img-container">
-                            <div class="img-inner">
-                                <div class="inner-skew">
-                                    <img src="../images/pdf.svg" width="140px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h3>سياسات الجمعية</h3>
-                            <div>
-                                <button class="button gradient-btn" onclick="window.location.href = 'news-details.html'">
-                                    تنزيل <i class="fa fa-download" aria-hidden="true"></i>
- 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,instrument" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,practical" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,pass" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,bigger" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,number" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,feature" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,line" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,railroad" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,pride" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,too" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,bottle" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,base" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,cell" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,bag" alt=""></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="content"><img src="https://source.unsplash.com/random/?nursery,card" alt=""></div>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
     <!-- Contact US -->
     <section id="stayconnect1" class="bglight position-relative padding noshadow">
@@ -555,6 +540,7 @@
     <!-- Contact US ends -->
 
 
+
     <!--Site Footer Here-->
     <footer id="site-footer" class="position-relative bg-orange padding_top">
         <div class="svg-footer-top-holder">
@@ -580,7 +566,7 @@
                         <!-- padding_bottom_half bottom20 pl-0 pl-lg-5 -->
                         <h3 class="whitecolor text-md-right text-center bottom25">خريطة الموقع</h3>
                         <div class="d-flex justify-content-between">
-                             <ul class="links">
+                            <ul class="links">
                                 <li class="text-right">
                                     <i class="fa-solid mx-1 fa-caret-left" style="color: #ccc;"></i>
                                     <a href="#header">الرئيسية</a>
@@ -652,10 +638,13 @@
                 <div class="col-lg-3 col-6 bottom20 padding_bottom_half">
 
                     <h3 class="whitecolor text-right bottom25 ">العنوان</h3>
-                   <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 135 شارع التحرير , القاهرة </p>
-                    <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 36 المدينة المنورة , السعودية </p>
-                    <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 55 مكة المكرمة , السعودية </p> 
-                
+                    <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 135 شارع التحرير
+                        , القاهرة </p>
+                    <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 36 المدينة
+                        المنورة , السعودية </p>
+                    <p class="text-right text-white"> <i class="fas fa-map-marker-alt text-white"></i> 55 مكة المكرمة ,
+                        السعودية </p>
+
                 </div>
             </div>
         </div>
@@ -709,6 +698,42 @@
     <script src="https://kit.fontawesome.com/385d561a40.js" crossorigin="anonymous"></script>
     <!--custom functions and script-->
     <script src="../../kids/js/functions.js"></script>
+
+    <script>
+        var gallery = document.querySelector('#gallery');
+        var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+        var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+        var resizeAll = function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+                var el = item;
+                el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+            });
+        };
+        gallery.querySelectorAll('img').forEach(function (item) {
+            item.classList.add('byebye');
+            if (item.complete) {
+                console.log(item.src);
+            }
+            else {
+                item.addEventListener('load', function () {
+                    var altura = getVal(gallery, 'grid-auto-rows');
+                    var gap = getVal(gallery, 'grid-row-gap');
+                    var gitem = item.parentElement.parentElement;
+                    gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                    item.classList.remove('byebye');
+                });
+            }
+        });
+        window.addEventListener('resize', resizeAll);
+        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                item.classList.toggle('full');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
