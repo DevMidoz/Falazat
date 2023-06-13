@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | المركز الاعلامي </title>
+    <title> فلذات | رأيك يهمنا </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -21,7 +21,92 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
-    
+    <style>
+        .form-group label, .checkbox label {font-size: 18px;}
+        .questionnareContainer{
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 9px;
+            padding: 1rem;
+        }
+        .animated-progress {
+            width: 300px;
+            height: 20px;
+            border-radius: 5px;
+            margin: 20px 10px;
+            border: 1px solid #BB5F44;
+            overflow: hidden;
+            position: relative;
+            }
+
+            .animated-progress span {
+            height: 100%;
+            display: block;
+            width: 0;
+            color: rgb(255, 251, 251);
+            line-height: 20px;
+            position: absolute;
+            text-align: end;
+            padding: 0px 5px;
+            }
+
+            .progress-blue span {
+            background-color: #BB5F44;
+            }
+
+
+
+            .cyberpunk-button {
+  background-color: #548E99 ;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #548E99 ;
+  border-radius: 5px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-bottom: 0px !important;
+}
+
+.cyberpunk-checkbox:before {
+  content: "";
+  background-color: #548E99 ;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+  font-size: 18px;
+  color: #26313c;
+  cursor: pointer;
+  user-select: none;
+  display: flex !important;
+  align-items: center;
+}
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="90" >
 <!--PreLoader-->
@@ -200,10 +285,10 @@
         <div class="bgdefault  title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">المركز الاعلامي </h3>
+                    <h3 class="float-left">رأيك يهمنا </h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item hover-light text-bold">المركز الاعلامي </li>
+                        <li class="breadcrumb-item hover-light text-bold">رأيك يهمنا </li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +298,294 @@
 
 
 <section class="padding">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCYKIPTf4PoQf2zWuVxylWBaLdL9c5mdI2X_tCQ76aRKIJpA/viewform?embedded=true" width="640" height="2152" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center heading_space  wow fadeIn animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeIn;">
+               <h2 class="heading bottom30 darkcolor font-light2">رأيك يهمنا</span>
+                  <span class="divider-center"></span>
+               </h2>
+               <div class="col-12 d-flex justify-content-center">
+                  <p class="mb-0">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <h2 class="d-none">Tabs</h2>
+            <div class="col-md-12 col-sm-12">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link darkcolor" data-toggle="collapse" href="#UserDetails"> <i class="fa fa-comments" aria-hidden="true"></i>  الأستبيان</a>
+                        </div>
+                        <div id="UserDetails" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <form id="questionnareForm" action="POST">
+                                    <div class="row mt-3 fadeIn animated">
+                                        <div class="col-12">
+                                            <div class="form-group text-right ">
+                                                <label for="fullName darkColor">الأسم بالكامل:</label>
+                                                <input class="form-control" type="text" placeholder="الأسم بالكامل:" required
+                                                    id="fullName">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group text-right ">
+                                                <label for="loginEmail">البريد الالكتروني:</label>
+                                                <input class="form-control" type="email" placeholder="البريد الالكتروني:" required
+                                                    id="loginEmail">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group text-right ">
+                                                <label for="datepicker">تاريخ الميلاد:</label>
+                                                <input class="form-control" type="text" placeholder="تاريخ الميلاد:" required
+                                                    name="datepicker" id="datepicker" lang="ar">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group text-right">
+                                                <label for="gender">هل سمعت عن حضانتنا من قبل؟</label>
+                                                <select class="form-select form-control" required id="gender">
+                                                    <option value="yes">نعم</option>
+                                                    <option value="no">لا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group text-right  ">
+                                                <label for="daysCare">ما هي الأيام التي تحتاج فيها للعناية بطفلك؟</label>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> السبت</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الأحد</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الأثنين</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الثلاناء</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الاربعاء</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الخميس</label>
+                                                </div>
+                                                <div class="checkboxContainer">
+                                                    <label class="cyberpunk-checkbox-label">
+                                                    <input class="cyberpunk-checkbox" type="checkbox"> الجمعة</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group text-right ">
+                                                <label for="employer">هل هناك أي شيء آخر تريد مشاركته معنا؟</label>
+                                                <textarea class="form-control" name="employer" id="employer" rows="5"
+                                                    placeholder="أكتب هنا... "></textarea>
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a class="button gradient-btn" id="SubmitAnswers" data-toggle="collapse" href="#ShareholderRelations"> ارسال</a>
+                                    </div>
+                                 </form>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#ShareholderRelations"> <i class="fa fa-bar-chart" aria-hidden="true"></i> نتائج الأستبيان</a>
+                        </div>
+                        <div id="ShareholderRelations" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row mt-3 fadeIn animated">
+                                        <!-- <div class="col-12">
+                                            <div class="form-group text-right">
+                                                <label for="gender">هل سمعت عن حضانتنا من قبل؟</label>
+                                                <select class="form-select form-control" required id="gender">
+                                                    <option value="yes">نعم</option>
+                                                    <option value="no">لا</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
+                                        <div class="col-12">
+                                            <div class="form-group text-right  ">
+                                                <label for="daysCare">هل سمعت عن حضانتنا من قبل؟</label>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label"> نعم</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="45"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label"> لا</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="75"></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group text-right  ">
+                                                <label for="daysCare">ما هي الأيام التي تحتاج فيها للعناية بطفلك؟</label>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">السبت</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="45"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الأحد</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="75"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الأثنين</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="33"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الثلاناء</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="16"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الاربعاء</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="80"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الخميس</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="66"></span>
+                                                      </div>
+                                                </div>
+                                                <div class="checkboxContainer d-flex justify-content-between">
+                                                    <div class="d-flex align-items-center" style="width: 10%;">
+                                                        <label class="cyberpunk-checkbox-label">الجمعة</label>
+                                                    </div>
+                                                    <div class="animated-progress progress-blue flex-grow-1">
+                                                        <span data-progress="55"></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+                                    </div>
+                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- <div class="questionnareContainer">
+            <form id="questionnareForm" action="POST">
+                <div class="row mt-3 slideInRight animated">
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="fullName darkColor">الأسم بالكامل:</label>
+                            <input class="form-control" type="text" placeholder="الأسم بالكامل:" required
+                                id="fullName">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="loginEmail">البريد الالكتروني:</label>
+                            <input class="form-control" type="email" placeholder="البريد الالكتروني:" required
+                                id="loginEmail">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="datepicker">تاريخ الميلاد:</label>
+                            <input class="form-control" type="text" placeholder="تاريخ الميلاد:" required
+                                name="datepicker" id="datepicker" lang="ar">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right">
+                            <label for="gender">هل سمعت عن حضانتنا من قبل؟</label>
+                            <select class="form-select form-control" required id="gender">
+                                <option value="yes">نعم</option>
+                                <option value="no">لا</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="loginEmail" class="d-none"></label>
+                            <input class="form-control" type="email" placeholder="العملة:" required
+                                id="currency">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="employer" class="d-none"></label>
+                            <input class="form-control" type="text" placeholder="جهة العمل:" required
+                                id="employer">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right ">
+                            <label for="membershipNo" class="d-none"></label>
+                            <input class="form-control" type="text" placeholder="رقم العضوية (ان وجد):" required
+                                id="membershipNo">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-right  ">
+                            <select class="form-select form-control" required id="gender">
+                                <option selected>صفة المساهم</option>
+                                <option value="1">موظف</option>
+                                <option value="2">مستفيد</option>
+                                <option value="3">حضانة</option>
+                                <option value="4">مدير نظام</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group text-right ">
+                            <label for="employer" class="d-none"></label>
+                            <textarea class="form-control" name="employer" id="employer" rows="5"
+                                placeholder="العنوان "></textarea>
+                        </div>
+                    </div>
+    
+                </div>
+             </form>
+         </div> -->
+    </div>
 </section>
 
 
@@ -435,5 +807,20 @@
 <script src="https://kit.fontawesome.com/385d561a40.js" crossorigin="anonymous"></script>
 <!--custom functions and script-->
 <script src="../../kids/js/functions.js"></script>
+<script>
+   let SubmitAnswers = document.getElementById('SubmitAnswers')
+   SubmitAnswers.addEventListener('click', function () {
+    $(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    1000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});
+   })
+   
+</script>
 </body>
 </html>

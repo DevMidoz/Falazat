@@ -447,7 +447,7 @@ p {
 }
 
 .font-18 {
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 .font-19 {
@@ -3578,11 +3578,11 @@ h4.darkcolor {
     width: 30px;
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#BB5F44), color-stop(51%, #DEBAAB), to(#BB5F44));
-    background-image: -webkit-linear-gradient(left, #BB5F44 0%, #DEBAAB 51%, #BB5F44 100%);
-    background-image: -moz-linear-gradient(left, #BB5F44 0%, #DEBAAB 51%, #BB5F44 100%);
-    background-image: -o-linear-gradient(left, #BB5F44 0%, #DEBAAB 51%, #BB5F44 100%);
-    background-image: linear-gradient(to right, #BB5F44 0%, #DEBAAB 51%, #BB5F44 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#8CB6BE), color-stop(51%, #8CB6BE), to(#8CB6BE));
+    background-image: -webkit-linear-gradient(left, #8CB6BE 0%, #8CB6BE 51%, #8CB6BE 100%);
+    background-image: -moz-linear-gradient(left, #8CB6BE 0%, #8CB6BE 51%, #8CB6BE 100%);
+    background-image: -o-linear-gradient(left, #8CB6BE 0%, #8CB6BE 51%, #8CB6BE 100%);
+    background-image: linear-gradient(to right, #8CB6BE 0%, #8CB6BE 51%, #8CB6BE 100%);
     -webkit-border-radius: 50%;
     border-radius: 50%;
     z-index: -2;

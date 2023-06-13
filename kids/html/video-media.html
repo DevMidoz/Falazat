@@ -20,191 +20,192 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
-    <style>
-        :root {
-  --base-grid: 8px;
-  --colour-body-background: #fff;
-  --colour-background: #548E99;
-  --colour-background-folded: #548E99;
-  --colour-background-stripes: #8CB6BE;
-  --colour-text: #fff;
-}
 
-
-
-#news_general .articles {
-  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
-  display: grid;
-  grid-row-gap: calc(var(--base-grid)*8);
-  grid-column-gap: calc(var(--base-grid)*6);
-  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
-  justify-items: center;
-}
-
-#news_general .articles__article {
-  cursor: pointer;
-  display: block;
+    <!-- <style>
+       #vidoes_media .card {
+  --blur: 16px;
+  --size: clamp(300px, 50vmin, 600px);
+  /* width: var(--size); */
+  aspect-ratio: 4 / 3;
   position: relative;
-  animation-name: animateIn;
-  animation-duration: .35s;
-  animation-delay: calc(var(--animation-order)*100ms);
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  border-radius: 2rem;
+  overflow: hidden;
+  color: #000;
+  transform: translateZ(0);
 }
 
-#news_general .articles__article:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--base-grid)*-2);
-  left: calc(var(--base-grid)*-2);
-  border: 2px dashed var(--colour-background);
-  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
-  z-index: -1;
-}
-
-#news_general .articles__article.before-orange:before {
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #BB5F44 0, #BB5F44 5px) !important;
-    border: 2px dashed #BB5F44 !important;
-}
-#news_general .articles__article.before-light-blue:before {
-    border: 2px dashed #8CB6BE !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #8CB6BE 0, #8CB6BE 5px) !important;
-}
-#news_general .articles__article.before-green:before {
-    border: 2px dashed #C1CA6D !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #C1CA6D 0, #C1CA6D 5px) !important;
-}
-#news_general .articles__article.before-yellow:before {
-    border: 2px dashed #e4dc99 !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #e4dc99 0, #e4dc99 5px) !important;
-}
-
-#news_general .articles__article,
-#news_general .articles__article:before {
-  width: calc(var(--base-grid)*35);
-  height: calc(var(--base-grid)*35);
-}
-
-#news_general .articles__link {
-  background-color: var(--colour-body-background);
-  border: 2px solid var(--colour-background);
-  display: block;
+#vidoes_media .card__img {
   width: 100%;
   height: 100%;
-  perspective: 1000px;
+  object-fit: cover;
+  transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+  transition: transform 0.2s;
 }
 
-#news_general .articles__link:after {
-  content: "";
+#vidoes_media .card__footer {
+  padding: 0 1.5rem;
   position: absolute;
-  top: 50%;
-  right: calc(var(--base-grid)*3);
-  width: calc(var(--base-grid)*2);
-  height: calc(var(--base-grid)*2);
-  margin-top: calc(var(--base-grid)*-1);
-  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  background-color: var(--colour-background);
-  opacity: 0;
-  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
-}
-
-#news_general .articles__link.after-orange {
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue {
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green {
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow {
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__link.after-orange:after {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue:after {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green:after {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow:after {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content {
-  background-color: var(--colour-background);
-  color: var(--colour-text);
-  position: absolute;
-  top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
-  padding: calc(var(--base-grid)*2);
+  width: 100%;
+  background: red;
+  display: grid;
+  grid-template-row: auto auto;
+  gap: 0.5ch;
+  background: hsl(0 0% 100% / 0.5);
+  backdrop-filter: blur(var(--blur));
+  height: 30%;
+  align-content: center;
+}
+
+#vidoes_media .card__action {
+  position: absolute;
+  aspect-ratio: 1;
+  width: calc(var(--size) * 0.15);
+  bottom: 30%;
+  right: 1.5rem;
+  transform: translateY(50%)
+    translateY(
+      calc(
+        (var(--size) * 0.4)
+      )
+    )
+    translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+  background: purple;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: hsl(0 0% 100% / 0.5);
+/*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+  transition: transform 0.2s;
+}
+
+#vidoes_media .card__action svg {
+  aspect-ratio: 1;
+  width: 50%;
+}
+
+#vidoes_media .card__footer span:nth-of-type(1) {
+  font-size: 18px;
+}
+
+#vidoes_media .card__footer span:nth-of-type(2) {
+  font-size: 15px;
+}
+
+#vidoes_media .card:is(:hover, :focus-visible) {
+  --hover: 1;
+}
+    </style> -->
+   
+    <style>
+        .video-gallery {
   display: flex;
-  flex-direction: column;
-  border: 2px solid var(--colour-background);
-}
-
-#news_general .articles__content.bg-orange {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__content.bg-light-blue {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__content.bg-green {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__content.bg-yellow {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content--lhs {
-  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-}
-
-#news_general .articles__content--rhs {
-  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
-}
-
-#news_general .articles__title {
-  font-size: calc(var(--base-grid)*4);
-  line-height: 1.125;
-  font-weight: 700;
-  letter-spacing: -.02em;
-}
-
-#news_general .articles__footer {
-  margin-top: auto;
-  font-size: calc(var(--base-grid)*2);
-  line-height: calc(var(--base-grid)*2);
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#news_general .articles__link:hover .articles__content--rhs {
-  background-color: var(--colour-background-folded);
-  transform: rotateY(-50deg);
+.video-card {
+  /* width: 30%; */
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-#news_general .articles__link:hover:after {
-  opacity: 1;
-  transform: translateX(calc(var(--base-grid)*1.5));
-  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
+.video-thumbnail {
+  position: relative;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  /* transform: translate(-50%, -50%); */
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.video-card:hover  .play-button{
+    transform: scale(1.2);
+}
+
+.video-title {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgb(0 0 0 / 37%);
+}
+
+.video-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+}
+
+.video-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 }
     </style>
 </head>
@@ -394,64 +395,194 @@
     </div>
 </section>
 
-<section id="news_general" class="padding">
+<section id="vidoes_media" class="padding">
    <div class="container">
-    <ol class="articles">
-        <!-- Loop through each article in the articles array -->
-        <!-- Use the index i to apply a custom CSS animation order -->
-        <!-- The article title, category, and date are displayed in two content divs -->
-        <!-- The second content div is hidden from screen readers using aria-hidden -->
-        <li class="articles__article before-orange" style="--animation-order: 1;">
-          <a href="news_list.html" class="articles__link after-orange">
-            <div class="articles__content bg-orange articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-            <div class="articles__content bg-orange articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article " style="--animation-order: 2;">
-          <a href="media-types.html" class="articles__link">
-            <div class="articles__content articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-            <div class="articles__content articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-green" style="--animation-order: 3;">
-          <a href="reports-list.html" class="articles__link after-green">
-            <div class="articles__content bg-green articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-            <div class="articles__content bg-green articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-light-blue" style="--animation-order: 3;">
-            <a href="news_list.html" class="articles__link after-light-blue">
-              <div class="articles__content bg-light-blue articles__content--lhs d-flex align-items-center justify-content-center">
-                <h2 class="articles__title text-center">الأنشطة</h2>
+    <div class="row">
+        <!-- <div class="col-md-4 col-sm-6 col-12">
+            <a href="#" class="card">
+                <img src="https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI0OTY1ODM&ixlib=rb-1.2.1&q=80" alt="balloon with an emoji face" class="card__img">
+                <span class="card__footer">
+                  <span>Awesome speedy card</span>
+                  <span>2 minutes!</span>
+                </span>
+                <span class="card__action">
+                  <svg viewBox="0 0 448 512" title="play">
+                    <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+                  </svg>
+                </span>
+              </a>
+        </div> -->
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/lPX0duH4GTg">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (1).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #1</h3>
+                </div>
               </div>
-              <div class="articles__content bg-light-blue articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-                <h2 class="articles__title text-center">الأنشطة</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/NIk1-ck4c6Q">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (3).jpg" alt="Video Thumbnail">
+                    <button class="play-button"><i class="fa fa-play"></i></button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #2</h3>
+                </div>
+                <!-- Repeat for each video -->
               </div>
-            </a>
-          </li>
-          <li class="articles__article before-yellow" style="--animation-order: 3;">
-          <a href="#" class="articles__link after-yellow">
-            <div class="articles__content bg-yellow articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-            <div class="articles__content bg-yellow articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-          </a>
-        </li>
-      </ol>
+              
+              <div class="video-modal-container">
+                  <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="video-modal">
+                  <div class="video-player"></div>
+                </div>
+                <div class="overlay"></div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/MQZmRfWOib8">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (4).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #3</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/lPX0duH4GTg">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (1).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #1</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/NIk1-ck4c6Q">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (3).jpg" alt="Video Thumbnail">
+                    <button class="play-button"><i class="fa fa-play"></i></button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #2</h3>
+                </div>
+                <!-- Repeat for each video -->
+              </div>
+              
+              <div class="video-modal-container">
+                  <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="video-modal">
+                  <div class="video-player"></div>
+                </div>
+                <div class="overlay"></div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/MQZmRfWOib8">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (4).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #3</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/lPX0duH4GTg">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (1).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #1</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/NIk1-ck4c6Q">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (3).jpg" alt="Video Thumbnail">
+                    <button class="play-button"><i class="fa fa-play"></i></button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #2</h3>
+                </div>
+                <!-- Repeat for each video -->
+              </div>
+              
+              <div class="video-modal-container">
+                  <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="video-modal">
+                  <div class="video-player"></div>
+                </div>
+                <div class="overlay"></div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/MQZmRfWOib8">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (4).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #3</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/lPX0duH4GTg">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (1).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #1</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/NIk1-ck4c6Q">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (3).jpg" alt="Video Thumbnail">
+                    <button class="play-button"><i class="fa fa-play"></i></button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #2</h3>
+                </div>
+                <!-- Repeat for each video -->
+              </div>
+              
+              <div class="video-modal-container">
+                  <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="video-modal">
+                  <div class="video-player"></div>
+                </div>
+                <div class="overlay"></div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="video-gallery">
+                <div class="video-card" data-video="https://www.youtube.com/embed/MQZmRfWOib8">
+                  <div class="video-thumbnail">
+                    <img src="../images/sddefault (4).jpg" alt="Video Thumbnail">
+                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                  </div>
+                  <h3 class="video-title">فيديو رقم #3</h3>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+  
    </div>
 </section>
 <!-- Contact US -->
@@ -673,5 +804,24 @@
 <script src="https://kit.fontawesome.com/385d561a40.js" crossorigin="anonymous"></script>
 <!--custom functions and script-->
 <script src="../../kids/js/functions.js"></script>
+<script>
+   $(document).ready(function() {
+  $(".play-button").click(function() {
+    debugger
+    var videoUrl = $(this).closest(".video-card").data("video");
+    var iframe = `<iframe src="${videoUrl}" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>`
+    // var iframe = '<iframe src="' + videoUrl + '" allowfullscreen></iframe>';
+    $(".video-player").html(iframe);
+    $(".video-modal-container").fadeIn();
+  });
+
+  $(".close-button, .overlay").click(function() {
+    $(".video-modal-container").fadeOut();
+    $(".video-player").html("");
+  });
+});
+</script>
 </body>
 </html>
+
+<!-- src="https://www.youtube.com/embed/lPX0duH4GTg" title="osratouna tv - قناة أسرتنا | أغنية الخضروات ومجموعة أغاني أطفال" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  -->
