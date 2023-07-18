@@ -258,7 +258,7 @@
 
 .svg-testimonial-bottom-holder{
     position: absolute;
-    bottom: 312px;
+    bottom: 319px;
     right: 0;
     left: 0;
     transform: rotate(180deg);
@@ -295,7 +295,7 @@
 
  /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
-
+   
     #testimonial-slider .owl-prev, #testimonial-slider-twitter .owl-prev  {
         position: absolute;
         top: -130px;
