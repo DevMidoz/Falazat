@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | المركز الاعلامي </title>
+    <title> فلذات | تفاصيل النشاط </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -21,190 +21,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
     <style>
-        :root {
-  --base-grid: 8px;
-  --colour-body-background: #fff;
-  --colour-background: #548E99;
-  --colour-background-folded: #548E99;
-  --colour-background-stripes: #8CB6BE;
-  --colour-text: #fff;
-}
-
-
-
-#news_general .articles {
-  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
-  display: grid;
-  grid-row-gap: calc(var(--base-grid)*8);
-  grid-column-gap: calc(var(--base-grid)*6);
-  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
-  justify-items: center;
-}
-
-#news_general .articles__article {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  animation-name: animateIn;
-  animation-duration: .35s;
-  animation-delay: calc(var(--animation-order)*100ms);
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
-
-#news_general .articles__article:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--base-grid)*-2);
-  left: calc(var(--base-grid)*-2);
-  border: 2px dashed var(--colour-background);
-  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
-  z-index: -1;
-}
-
-#news_general .articles__article.before-orange:before {
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #BB5F44 0, #BB5F44 5px) !important;
-    border: 2px dashed #BB5F44 !important;
-}
-#news_general .articles__article.before-light-blue:before {
-    border: 2px dashed #8CB6BE !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #8CB6BE 0, #8CB6BE 5px) !important;
-}
-#news_general .articles__article.before-green:before {
-    border: 2px dashed #C1CA6D !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #C1CA6D 0, #C1CA6D 5px) !important;
-}
-#news_general .articles__article.before-yellow:before {
-    border: 2px dashed #e4dc99 !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #e4dc99 0, #e4dc99 5px) !important;
-}
-
-#news_general .articles__article,
-#news_general .articles__article:before {
-  width: calc(var(--base-grid)*35);
-  height: calc(var(--base-grid)*35);
-}
-
-#news_general .articles__link {
-  background-color: var(--colour-body-background);
-  border: 2px solid var(--colour-background);
-  display: block;
-  width: 100%;
-  height: 100%;
-  perspective: 1000px;
-}
-
-#news_general .articles__link:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(var(--base-grid)*3);
-  width: calc(var(--base-grid)*2);
-  height: calc(var(--base-grid)*2);
-  margin-top: calc(var(--base-grid)*-1);
-  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  background-color: var(--colour-background);
-  opacity: 0;
-  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
-}
-
-#news_general .articles__link.after-orange {
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue {
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green {
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow {
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__link.after-orange:after {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue:after {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green:after {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow:after {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content {
-  background-color: var(--colour-background);
-  color: var(--colour-text);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: calc(var(--base-grid)*2);
+        .video-gallery {
   display: flex;
-  flex-direction: column;
-  border: 2px solid var(--colour-background);
-}
-
-#news_general .articles__content.bg-orange {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__content.bg-light-blue {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__content.bg-green {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__content.bg-yellow {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content--lhs {
-  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-}
-
-#news_general .articles__content--rhs {
-  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
-}
-
-#news_general .articles__title {
-  font-size: calc(var(--base-grid)*4);
-  line-height: 1.125;
-  font-weight: 700;
-  letter-spacing: -.02em;
-}
-
-#news_general .articles__footer {
-  margin-top: auto;
-  font-size: calc(var(--base-grid)*2);
-  line-height: calc(var(--base-grid)*2);
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#news_general .articles__link:hover .articles__content--rhs {
-  background-color: var(--colour-background-folded);
-  transform: rotateY(-50deg);
+.video-card {
+   width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-#news_general .articles__link:hover:after {
-  opacity: 1;
-  transform: translateX(calc(var(--base-grid)*1.5));
-  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
+.video-thumbnail {
+  position: relative;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.play-button {
+    position: absolute;
+    top: 35%;
+    left: 46%;
+    /* transform: translate(-50%, -50%); */
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.play-button i{font-size: 45px !important;}
+.video-card:hover  .play-button{
+    transform: scale(1.2);
+}
+
+.video-title {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgb(0 0 0 / 37%);
+}
+
+.video-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+}
+
+.video-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 }
     </style>
 </head>
@@ -383,10 +307,10 @@
         <div class="bgdefault  title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">المركز الاعلامي </h3>
+                    <h3 class="float-left">تفاصيل النشاط </h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item hover-light text-bold">المركز الاعلامي </li>
+                        <li class="breadcrumb-item hover-light text-bold">تفاصيل النشاط </li>
                     </ul>
                 </div>
             </div>
@@ -394,129 +318,64 @@
     </div>
 </section>
 
-<section id="news_general" class="padding">
-   <div class="container">
-    <ol class="articles">
-        <!-- Loop through each article in the articles array -->
-        <!-- Use the index i to apply a custom CSS animation order -->
-        <!-- The article title, category, and date are displayed in two content divs -->
-        <!-- The second content div is hidden from screen readers using aria-hidden -->
-        <li class="articles__article before-orange" style="--animation-order: 1;">
-          <a href="news_list.html" class="articles__link after-orange">
-            <div class="articles__content bg-orange articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-            <div class="articles__content bg-orange articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article " style="--animation-order: 2;">
-          <a href="media-types.html" class="articles__link">
-            <div class="articles__content articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-            <div class="articles__content articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-green" style="--animation-order: 3;">
-          <a href="reports-list.html" class="articles__link after-green">
-            <div class="articles__content bg-green articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-            <div class="articles__content bg-green articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-light-blue" style="--animation-order: 3;">
-            <a href="activitiesList.html" class="articles__link after-light-blue">
-              <div class="articles__content bg-light-blue articles__content--lhs d-flex align-items-center justify-content-center">
-                <h2 class="articles__title text-center">الأنشطة</h2>
-              </div>
-              <div class="articles__content bg-light-blue articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-                <h2 class="articles__title text-center">الأنشطة</h2>
-              </div>
-            </a>
-          </li>
-          <li class="articles__article before-yellow" style="--animation-order: 3;">
-          <a href="#" class="articles__link after-yellow">
-            <div class="articles__content bg-yellow articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-            <div class="articles__content bg-yellow articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-          </a>
-        </li>
-      </ol>
-   </div>
-</section>
-<!-- Contact US -->
-<section id="stayconnect1" class="bglight position-relative padding noshadow">
-    <div class="container ">
-        <div class="widget ">
-            <div class="row">
-                <div class="col-md-12 text-center wow fadeIn mt-n3" data-wow-delay="300ms">
-                    <h2 class="heading bottom30 darkcolor font-light2 pt-1"><span class="font-normal">اتصل بنا</span>
-                        <span class="divider-center"></span>
-                    </h2>
-                    <div class="col-12 bottom35">
-                        <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 order-sm-2">
-                    <div class="imageContainer wow fadeInLeft" style="background-image: url('../images/pexels-markus-spiske-1300-750.jpg');">
-                      
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="heading-title  wow fadeInUp" data-wow-delay="300ms">
-                        <form class=" wow fadeInUp" data-wow-delay="400ms" id="contact-form-data">
-                            <div class="row px-2">
-                                <div class="col-md-12 col-sm-12" id="result"></div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="name1" class="d-none"></label>
-                                        <input class="form-control" id="name1" type="text" placeholder="الاسم :" required  name="userName">
-                                    </div>
+<div class="video-modal-container">
+    <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+  <div class="video-modal">
+    <div class="video-player"></div>
+  </div>
+  <div class="overlay"></div>
+</div>
+
+<!-- Our Blogs -->
+<section id="our-blog" class="bglight padding_top padding_bottom_half">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="news_item shadow-equal">
+                    <div class="owl-carousel"  id="images_owl-carousel" style="overflow: hidden;max-height: 600px;" >
+                        <div class="item"> <img src="../images/6.jpg" alt="Latest News" class="img-responsive"></div>
+                        <div class="item">  
+                            <div class="video-gallery">
+                                <div class="video-card" data-video="https://www.youtube.com/embed/lPX0duH4GTg">
+                                  <div class="video-thumbnail">
+                                    <img src="../images/sddefault (1).jpg" alt="Video Thumbnail">
+                                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                                  </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="email1" class="d-none"></label>
-                                        <input class="form-control" type="email" id="email1" placeholder="البريد الالكتروني:" name="userEmail">
-                                    </div>
+                              </div>
+                          
+                        </div>
+                        <div class="item"> <img src="../images/5.jpg" alt="Latest News" class="img-responsive"></div>
+                        <div class="item">  
+                            <div class="video-gallery">
+                                <div class="video-card" data-video="https://www.youtube.com/embed/NIk1-ck4c6Q">
+                                  <div class="video-thumbnail">
+                                    <img src="../images/sddefault (3).jpg" alt="Video Thumbnail">
+                                    <button class="play-button"> <i class="fa fa-play"></i> </button>
+                                  </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group  ">
-                                        <select class="form-select form-control" required id="gender">
-                                            <option selected>نوع التواصل :</option>
-                                            <option value="complaints">شكاوى</option>
-                                            <option value="suggestions">اقتراحات</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message1" class="d-none"></label>
-                                        <textarea class="form-control" id="message1" placeholder="الرسالة :" required  name="userMessage"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <button type="button" id="submit_btn1" class="contact_btn button gradient-btn w-100">ارسال</button>
-                                </div>
-                            </div>
-                        </form>
+                              </div>
+                          
+                        </div>
+                        <div class="item"> <img src="../images/8.jpg" alt="Latest News" class="img-responsive"></div>
+                        <div class="item"> <img src="../images/2.webp" alt="Latest News" class="img-responsive"></div>
+                      </div>
+                    <div class="news_desc text-center text-md-right">
+                        <h3 class="text-capitalize font-normal darkcolor"><a href="news-detail.html">لوريم إيبسوم هو ببساطة نص شكلي </a></h3>
+                        <ul class="meta-tags top20 bottom20">
+                            <li><a href="#."><i class="fas fa-calendar-alt"></i>14 فبراير</a></li>
+                        </ul>
+                        <p class="bottom35">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.</p>
+                        <p class="heading_space"> كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص</p>
+                        <blockquote class=" darkcolor heading_space"> <i class="fa fa-quote-right mx-2"></i>لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. </blockquote>
+                  
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Contact US ends -->
-
+<!--Our Blog Ends-->
 
 
     <!--Site Footer Here-->
@@ -903,5 +762,23 @@
             });
         });
     </script>
+    
+    <script>
+        $(document).ready(function() {
+       $(".play-button").click(function() {
+         debugger
+         var videoUrl = $(this).closest(".video-card").data("video");
+         var iframe = `<iframe src="${videoUrl}" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>`
+         // var iframe = '<iframe src="' + videoUrl + '" allowfullscreen></iframe>';
+         $(".video-player").html(iframe);
+         $(".video-modal-container").fadeIn();
+       });
+     
+       $(".close-button, .overlay").click(function() {
+         $(".video-modal-container").fadeOut();
+         $(".video-player").html("");
+       });
+     });
+     </script>
 </body>
 </html>

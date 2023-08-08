@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> فلذات | المركز الاعلامي </title>
+    <title> فلذات | الأنشطة </title>
     <link href="../../kids/images/logo(فلذات).PNG" rel="icon">
     <link rel="stylesheet" href="../../vendor/css/bundle.min.css">
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.min.css">
@@ -21,191 +21,144 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&display=swap" rel="stylesheet"> -->
     <style>
-        :root {
-  --base-grid: 8px;
-  --colour-body-background: #fff;
-  --colour-background: #548E99;
-  --colour-background-folded: #548E99;
-  --colour-background-stripes: #8CB6BE;
-  --colour-text: #fff;
+     figure {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 500px;
+	 border-radius: 10px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+ figure:hover {
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+ figure:hover h1 {
+	 opacity: 0;
+	 transform: scale(0.7);
+    
+}
+ figure:hover img {
+	 transform: scale(1.25);
+}
+ figure:hover figcaption {
+	 bottom: 0;
+}
+ figure h1 {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+    z-index: 999;
+     
+}
+ figure .imageContainer {
+	 height: 100%;
+	 transition: 0.25s;
+}
+ figure figcaption {
+	 position: absolute;
+	 bottom: -36%;
+	 left: 0;
+	 width: 100%;
+	 margin: 0;
+	 padding: 30px;
+	 background-color: rgba(84, 142, 153, 0.85);
+	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	 color: white;
+	 line-height: 1;
+	 transition: 0.25s;
+     text-align: right;
+}
+figure figcaption .userName {
+    top: 7px;
+    left: 0;
+}
+ figure figcaption h3 {
+	 margin: 0 0 20px;
+	 padding: 0;
+}
+ figure figcaption p {
+	 font-size: 14px;
+	 line-height: 1.75;
+}
+ figure figcaption button {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin: 10px 0 0;
+	 padding: 10px 30px;
+	 /* background-color: #1abc9c; */
+	 border: none;
+	 border-radius: 5px;
+	 color: white;
+	 font-size: 14px;
+	 cursor: pointer;
+}
+figure .meta-tags {
+    top: 90px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    /* font-size: 11px; */
+    font-weight: 100;
+    line-height: 1;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+    z-index: 999;
+}
+figure:hover .meta-tags {
+	 opacity: 0;
+	 transform: scale(0.7);
+    
 }
 
-
-
-#news_general .articles {
-  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
-  display: grid;
-  grid-row-gap: calc(var(--base-grid)*8);
-  grid-column-gap: calc(var(--base-grid)*6);
-  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
-  justify-items: center;
+ @media (max-width: 1200px) {
+    figure figcaption {
+        bottom: -39%;
+    }
 }
 
-#news_general .articles__article {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  animation-name: animateIn;
-  animation-duration: .35s;
-  animation-delay: calc(var(--animation-order)*100ms);
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+@media (max-width: 992px) {
+    figure figcaption {
+    bottom: -35%;
+}
 }
 
-#news_general .articles__article:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--base-grid)*-2);
-  left: calc(var(--base-grid)*-2);
-  border: 2px dashed var(--colour-background);
-  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
-  z-index: -1;
+@media (max-width: 768px) {
+    figure figcaption {
+        bottom: -31%;
+    }
 }
 
-#news_general .articles__article.before-orange:before {
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #BB5F44 0, #BB5F44 5px) !important;
-    border: 2px dashed #BB5F44 !important;
+@media (max-width: 576px) {
+    figure figcaption {
+        bottom: -31%;
+    }
 }
-#news_general .articles__article.before-light-blue:before {
-    border: 2px dashed #8CB6BE !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #8CB6BE 0, #8CB6BE 5px) !important;
+@media (max-width: 462px) {
+    figure figcaption {
+        bottom: -35%;
+    }
 }
-#news_general .articles__article.before-green:before {
-    border: 2px dashed #C1CA6D !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #C1CA6D 0, #C1CA6D 5px) !important;
-}
-#news_general .articles__article.before-yellow:before {
-    border: 2px dashed #e4dc99 !important;
-    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px, #e4dc99 0, #e4dc99 5px) !important;
-}
+/* @media (max-width: 341px) {
+    figure figcaption {
+        bottom: -31%;
+    }
+} */
 
-#news_general .articles__article,
-#news_general .articles__article:before {
-  width: calc(var(--base-grid)*35);
-  height: calc(var(--base-grid)*35);
-}
-
-#news_general .articles__link {
-  background-color: var(--colour-body-background);
-  border: 2px solid var(--colour-background);
-  display: block;
-  width: 100%;
-  height: 100%;
-  perspective: 1000px;
-}
-
-#news_general .articles__link:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(var(--base-grid)*3);
-  width: calc(var(--base-grid)*2);
-  height: calc(var(--base-grid)*2);
-  margin-top: calc(var(--base-grid)*-1);
-  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  background-color: var(--colour-background);
-  opacity: 0;
-  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
-}
-
-#news_general .articles__link.after-orange {
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue {
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green {
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow {
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__link.after-orange:after {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__link.after-light-blue:after {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__link.after-green:after {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__link.after-yellow:after {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content {
-  background-color: var(--colour-background);
-  color: var(--colour-text);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: calc(var(--base-grid)*2);
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--colour-background);
-}
-
-#news_general .articles__content.bg-orange {
-    background-color : #BB5F44 !important;
-    border: 2px solid #BB5F44 !important;
-}
-#news_general .articles__content.bg-light-blue {
-    background-color : #8CB6BE !important;
-    border: 2px solid #8CB6BE !important;
-}
-#news_general .articles__content.bg-green {
-    background-color : #C1CA6D !important;
-    border: 2px solid #C1CA6D !important;
-}
-#news_general .articles__content.bg-yellow {
-    background-color : #e4dc99 !important;
-    border: 2px solid #e4dc99 !important;
-}
-
-#news_general .articles__content--lhs {
-  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-}
-
-#news_general .articles__content--rhs {
-  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
-}
-
-#news_general .articles__title {
-  font-size: calc(var(--base-grid)*4);
-  line-height: 1.125;
-  font-weight: 700;
-  letter-spacing: -.02em;
-}
-
-#news_general .articles__footer {
-  margin-top: auto;
-  font-size: calc(var(--base-grid)*2);
-  line-height: calc(var(--base-grid)*2);
-  display: flex;
-  justify-content: space-between;
-}
-
-#news_general .articles__link:hover .articles__content--rhs {
-  background-color: var(--colour-background-folded);
-  transform: rotateY(-50deg);
-}
-
-#news_general .articles__link:hover:after {
-  opacity: 1;
-  transform: translateX(calc(var(--base-grid)*1.5));
-  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
-}
     </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="90" >
@@ -383,10 +336,10 @@
         <div class="bgdefault  title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">المركز الاعلامي </h3>
+                    <h3 class="float-left">الأنشطة </h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light text-bold"><a href="../../index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item hover-light text-bold">المركز الاعلامي </li>
+                        <li class="breadcrumb-item hover-light text-bold">الأنشطة </li>
                     </ul>
                 </div>
             </div>
@@ -396,64 +349,327 @@
 
 <section id="news_general" class="padding">
    <div class="container">
-    <ol class="articles">
-        <!-- Loop through each article in the articles array -->
-        <!-- Use the index i to apply a custom CSS animation order -->
-        <!-- The article title, category, and date are displayed in two content divs -->
-        <!-- The second content div is hidden from screen readers using aria-hidden -->
-        <li class="articles__article before-orange" style="--animation-order: 1;">
-          <a href="news_list.html" class="articles__link after-orange">
-            <div class="articles__content bg-orange articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-            <div class="articles__content bg-orange articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الأخبار</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article " style="--animation-order: 2;">
-          <a href="media-types.html" class="articles__link">
-            <div class="articles__content articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-            <div class="articles__content articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الوسائط</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-green" style="--animation-order: 3;">
-          <a href="reports-list.html" class="articles__link after-green">
-            <div class="articles__content bg-green articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-            <div class="articles__content bg-green articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">التقارير</h2>
-            </div>
-          </a>
-        </li>
-        <li class="articles__article before-light-blue" style="--animation-order: 3;">
-            <a href="activitiesList.html" class="articles__link after-light-blue">
-              <div class="articles__content bg-light-blue articles__content--lhs d-flex align-items-center justify-content-center">
-                <h2 class="articles__title text-center">الأنشطة</h2>
-              </div>
-              <div class="articles__content bg-light-blue articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-                <h2 class="articles__title text-center">الأنشطة</h2>
-              </div>
-            </a>
-          </li>
-          <li class="articles__article before-yellow" style="--animation-order: 3;">
-          <a href="#" class="articles__link after-yellow">
-            <div class="articles__content bg-yellow articles__content--lhs d-flex align-items-center justify-content-center">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-            <div class="articles__content bg-yellow articles__content--rhs d-flex align-items-center justify-content-center" aria-hidden="true">
-              <h2 class="articles__title text-center">الإنجازات</h2>
-            </div>
-          </a>
-        </li>
-      </ol>
+    <div class="row">
+        <div class="col-md-12 text-center animated wow fadeIn" data-wow-delay="300ms">
+            <h2 class="heading bottom45 darkcolor font-weight-normal"> الأنشطة <span class="divider-center"></span></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image2_375x500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <figure class="image-block">
+                <h1>لوريم إيبسوم نص شكلي</h1>
+
+              
+                <div class="imageContainer" style="background-image: url('../images/image_375X500.jpg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <!-- <img src="../images/image_375X500.jpg" alt="" /> -->
+                <figcaption>
+                    <div class="position-relative">
+                        <h3>
+                            الوصف
+                        </h3>
+                        <p>وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                        <button class="button gradient-btn" onclick="window.location.href = 'activityDetails.html'">
+                            اقرأ المزيد
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    
+    
    </div>
 </section>
+
+<!--Customers Review Slider-->
+<section id="reviews" class="padding" dir="ltr">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated wow fadeIn" data-wow-delay="300ms">
+                <h2 class="heading bottom45 darkcolor font-weight-normal"> تغريدات تويتر <span class="divider-center"></span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div id="testimonial-main-slider" class="owl-carousel">
+                    <!--item 1-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/ceo.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">أحمد ياسر</a></h4>
+                            <span class="defaultcolor font-11">Senior Front End Engineer</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 2-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/billgatesheadshot.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">محمد فايز</a></h4>
+                            <span class="defaultcolor font-11">Business Owner</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 3-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/WLT_A-Day-in-the-Life-of-Jeff-Bezos_w2xsjl-e1612343354223.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">محمد علي</a></h4>
+                            <span class="defaultcolor font-11">Project Manager</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 4-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/ceo.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">مؤمن</a></h4>
+                            <span class="defaultcolor font-11">Business Analyst</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 5-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/billgatesheadshot.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">حسن</a></h4>
+                            <span class="defaultcolor font-11">Back End Engineer</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 6-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/WLT_A-Day-in-the-Life-of-Jeff-Bezos_w2xsjl-e1612343354223.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">سفيان أحمد</a></h4>
+                            <span class="defaultcolor font-11">Senior Data Scientist</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 7-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/ceo.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">جود أحمد</a></h4>
+                            <span class="defaultcolor font-11"><a href="#.">Software Engineer</a></span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--item 8-->
+                    <div class="item">
+                        <div class="testimonial-wrapp">
+                            <span class="quoted"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-text">
+                                <p class="bottom40">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. </p>
+                            </div>
+                            <div class="testimonial-photo"><img alt="" src="../images/billgatesheadshot.jpg"></div>
+                            <h4 class="darkcolor"><a href="#.">محمد أحمد</a></h4>
+                            <span class="defaultcolor font-11">Software Archetict</span>
+                            <div class="icon mt-2 testimonial-icon">
+                                <ul class="social-icons darkcolor">
+                                    <li><a class="facebook" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="twitter" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a class="insta" href="javascript:void(0)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="whatsapp" href="javascript:void(0)" title="Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Customers Review-->
 <!-- Contact US -->
 <section id="stayconnect1" class="bglight position-relative padding noshadow">
     <div class="container ">
@@ -464,7 +680,7 @@
                         <span class="divider-center"></span>
                     </h2>
                     <div class="col-12 bottom35">
-                        <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.</p>
+                        <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 order-sm-2">

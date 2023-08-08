@@ -678,6 +678,33 @@ jQuery($=> {
         }
     });
 
+    $("#images_owl-carousel").owlCarousel({
+        items: 1,
+        autoplay: true,
+        autoplayTimeout : 3000,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        loop: true,
+        margin: 30,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        dots: false,
+        nav: false,
+        rtl:true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            980: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            320: {
+                items: 1,
+            },
+        }
+    });
+
     /*Testimonials-twitter*/
     $("#testimonial-slider-twitter").owlCarousel({
         items: 5,
